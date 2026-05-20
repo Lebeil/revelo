@@ -8,44 +8,44 @@ export type Verbatim = {
 export const verbatims: Verbatim[] = [
   {
     quote:
-      "J'ai un health score mais aucune visibilité sur le contrat. Je ne sais pas si le client va renouveler ou si son usage me trompe.",
-    author: "Head of CS",
-    role: "Éditeur SaaS B2B, 180 employés",
+      "C'était vraiment l'argent. Je ne l'avais pas vu venir. C'est un client qui était à fond dans la data, à fond sur la plateforme, mais on n'a pas pu le sauver.",
+    author: "Sirine, Senior CSM",
+    role: "Choose My Company, 125 clients, 700 k€ ARR",
     source: "Interview Revelo, mai 2026",
   },
   {
     quote:
-      "On bricole en Excel toute la journée. Les renégos arrivent toujours par surprise, jamais en mode anticipé.",
-    author: "KAM Enterprise",
-    role: "Scale-up SaaS RH, 260 employés",
+      "Les clients partent principalement pour raisons budgétaires depuis 6 à 12 mois. Le prix est devenu le top 1 vs les fonctionnalités. Votre concurrent fait la même chose moins cher.",
+    author: "Thibault, CSM Freelance",
+    role: "Ex Spendesk, 60 comptes 1 M€ ARR",
     source: "Interview Revelo, mai 2026",
   },
   {
     quote:
-      "L'alignement Finance et Customer Success, c'est gérable mais lourd. On parle deux langues différentes du même client.",
-    author: "VP Customer Success",
-    role: "Plateforme B2B fintech, 320 employés",
+      "Aujourd'hui c'est éparpillé dans deux outils. Ce serait pas mal que j'en aie un seul. Utiliser plein d'outils, c'est pas forcément les meilleures choses.",
+    author: "Assia, Senior CSM",
+    role: "Waat, 70 grands comptes tertiaire",
     source: "Interview Revelo, mai 2026",
   },
   {
     quote:
-      "Most CS platforms are built for the CS org you dream about, not the one you actually have.",
-    author: "Justine",
-    role: "VP CS, Medium",
-    source: "Article public, 2026",
+      "L'IA qui me donne des propositions, et ensuite moi en tant qu'humain qui connaît la relation, je juge ce qui est mieux. Le health score on ne l'utilise pas trop.",
+    author: "Sirine, Senior CSM",
+    role: "Choose My Company, EdTech SaaS",
+    source: "Interview Revelo, mai 2026",
   },
   {
     quote:
-      "Implementation took 6 months. Now we cannot consider switching because of how entrenched we are, even though it is obscenely expensive.",
-    author: "CS Operations Lead",
-    role: "Utilisateur Gainsight",
-    source: "Avis G2, 2025",
+      "Avoir une remontée qui fait usage légal et benchmark tarifaire intégré, ça c'est vrai que ça serait intéressant.",
+    author: "Jean-Louis, Co-fondateur",
+    role: "Botdesign, HealthTech, contrats 4 ans hôpitaux",
+    source: "Interview Revelo, mai 2026",
   },
   {
     quote:
-      "87 % des entreprises ont raté leurs objectifs de revenus 2025 malgré l'IA, à cause de données Finance et CS silotées.",
-    author: "Clari Labs",
-    role: "État du Revenue 2026",
-    source: "Rapport public",
+      "Sans rappel, tu n'y penses pas. Le client utilisait bien la plateforme, il était content. C'est juste un problème de coût et de crise financière.",
+    author: "Thibault, CSM Freelance",
+    role: "Ex Spendesk, fintech",
+    source: "Interview Revelo, mai 2026",
   },
 ];

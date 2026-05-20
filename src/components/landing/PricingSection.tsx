@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 export function PricingSection() {
   return (
-    <section id="pricing" className="relative py-24 lg:py-32">
+    <section id="pricing" className="relative py-16 sm:py-20 lg:py-32">
       <div className="section-shell">
         <div className="section-inner-wide">
           <RevealOnScroll>
@@ -28,7 +28,7 @@ export function PricingSection() {
                 <p className="font-semibold uppercase tracking-widest text-orange-deep">
                   Beta privée
                 </p>
-                <p className="mt-1 max-w-65 leading-relaxed">
+                <p className="mt-1 max-w-xs leading-relaxed">
                   Accès gratuit complet pour les 50 premiers pilotes signés avant le 30 juin 2026.
                 </p>
               </div>

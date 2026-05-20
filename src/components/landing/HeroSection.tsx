@@ -6,14 +6,14 @@ import { HeroDashboardPreview } from "./HeroDashboardPreview";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 
 const trustItems = [
-  "8 interviews CS / RevOps / KAM menées",
-  "100 % reconnaissent le problème",
+  "5 interviews CS, KAM, RevOps menées",
+  "Score hybride machine plus ressenti CSM noté",
   "Pilote en 10 jours ouvrés",
 ];
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden pt-28 lg:pt-32" id="hero">
+    <section className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-32" id="hero">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[640px] grain opacity-70"
@@ -28,7 +28,7 @@ export function HeroSection() {
       />
 
       <div className="section-shell">
-        <div className="section-inner-wide grid items-center gap-14 pb-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-28">
+        <div className="section-inner-wide grid items-center gap-10 pb-14 sm:gap-14 sm:pb-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-28">
           <div className="space-y-8">
             <RevealOnScroll>
               <Badge className="border-teal/15 bg-teal/8 text-teal hover:bg-teal/12">
@@ -39,27 +39,27 @@ export function HeroSection() {
 
             <RevealOnScroll delay={0.05}>
               <h1 className="display-serif text-balance text-4xl text-midnight sm:text-5xl lg:text-6xl">
-                Anticipez les renégociations B2B
-                {" "}
-                <span className="text-teal">avant qu'elles ne</span>
+                Le copilote qui
                 {" "}
                 <span className="relative inline-block">
-                  vous surprennent
+                  <span className="text-teal">sécurise</span>
                   <span
                     aria-hidden
                     className="absolute -bottom-2 left-0 h-2.5 w-full rounded-full bg-orange/40"
                   />
                 </span>
-                .
+                {" "}
+                vos renouvellements B2B.
               </h1>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.1}>
               <p className="max-w-xl text-lg leading-relaxed text-midnight/75">
-                Revelo est l'agent IA qui croise vos contrats clients et leur usage produit
-                pour détecter les signaux de risque 60 à 90 jours avant l'échéance.
-                Brief KAM rédigé, scénarios de négo comparés, alerte Slack envoyée :
-                vos équipes Customer Success, RevOps et KAM passent de la réaction à l'anticipation.
+                Revelo fusionne le <span className="font-semibold text-teal">score machine</span>{" "}
+                (usage, contrat, facturation, support) et le{" "}
+                <span className="font-semibold text-teal">ressenti CSM noté en équipe</span>, puis
+                propose un plan d'action IA personnalisé selon le profil interlocuteur. Intégré
+                nativement dans HubSpot ou Salesforce, pas un outil de plus.
               </p>
             </RevealOnScroll>
 
@@ -71,7 +71,7 @@ export function HeroSection() {
                   className="bg-teal text-cream hover:bg-teal-deep"
                 >
                   <Link href="#lead">
-                    Demander une démo
+                    Rejoindre la beta
                     <ArrowRight className="ml-2" size={16} />
                   </Link>
                 </Button>

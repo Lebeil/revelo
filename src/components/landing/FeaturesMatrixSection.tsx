@@ -31,7 +31,7 @@ export function FeaturesMatrixSection() {
   const [active, setActive] = useState<Persona["id"]>("marie");
 
   return (
-    <section id="features" className="relative py-24 lg:py-32">
+    <section id="features" className="relative py-16 sm:py-20 lg:py-32">
       <div className="section-shell">
         <div className="section-inner">
           <RevealOnScroll>

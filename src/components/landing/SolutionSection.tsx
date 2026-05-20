@@ -1,48 +1,48 @@
-import { Plug, Radar, Wand2, ArrowRight } from "lucide-react";
+import { Radar, Shuffle, Sparkles, ArrowRight } from "lucide-react";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 
 const steps = [
   {
-    id: "connect",
-    title: "Connecter",
-    icon: Plug,
+    id: "capture",
+    title: "Capter",
+    icon: Radar,
     description:
-      "Branchez Salesforce, HubSpot, Stripe, Pennylane, Sellsy, Qonto, vos logs produit. Les contrats PDF sont OCRisés et vectorisés en moins de 24 h.",
+      "Revelo aspire en continu les signaux machine et les signaux humains de votre stack existante. Pas de saisie manuelle, pas de nouvel outil à ouvrir.",
     bullets: [
-      "Connecteurs natifs FR et EU",
-      "Réconciliation ID Salesforce / ID Produit",
-      "OCR + extraction NER des clauses",
+      "HubSpot, Salesforce, Stripe, Pennylane, Zendesk",
+      "Sentiment extrait des CR de réunion (Modjo, Notta)",
+      "Notation collaborative CSM, 5 min le vendredi",
     ],
   },
   {
-    id: "detect",
-    title: "Détecter",
-    icon: Radar,
+    id: "cross",
+    title: "Croiser",
+    icon: Shuffle,
     description:
-      "L'agent croise usage produit, clauses contractuelles, historique tickets et signaux faibles pour bâtir un score de risque par compte, lisible et auditable.",
+      "Score machine reproductible + ressenti humain noté en équipe = Health Score hybride. Les écarts entre les deux deviennent les vrais signaux à traiter.",
     bullets: [
-      "Score à 60 à 90 jours avant l'échéance",
-      "Signaux faibles : rupture de tendance, palier atteint",
-      "Pondérations transparentes par compte",
+      "Score rouge, orange, vert priorisé chaque matin",
+      "Détection des écarts machine vs humain",
+      "Signaux humains : manager de transition, désengagement nouveau référent",
     ],
   },
   {
     id: "act",
     title: "Agir",
-    icon: Wand2,
+    icon: Sparkles,
     description:
-      "L'agent ne se contente pas d'alerter : il rédige le brief KAM, propose trois scénarios commerciaux chiffrés et déclenche l'alerte Slack ou Salesforce.",
+      "Pour chaque compte en zone rouge, l'agent IA propose un plan d'action personnalisé selon le profil interlocuteur. Vous lisez, ajustez, déclenchez.",
     bullets: [
-      "Brief de risque rédigé en 90 secondes",
-      "Trois scénarios comparés (save, expansion, renégo)",
-      "Push Slack, Teams, widget Salesforce",
+      "Reprise contact préventive scriptée",
+      "Remise anticipée avec marge protégée",
+      "Scénario renégo ou escalade KAM, prêts à activer",
     ],
   },
 ];
 
 export function SolutionSection() {
   return (
-    <section id="solution" className="relative bg-midnight text-cream py-24 lg:py-32">
+    <section id="solution" className="relative bg-midnight text-cream py-16 sm:py-20 lg:py-32">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-30"
@@ -58,11 +58,12 @@ export function SolutionSection() {
               <span className="bg-orange" />La méthode Revelo
             </p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-cream sm:text-4xl">
-              Connecter, détecter, agir. Trois étapes, un seul agent.
+              Capter, croiser, agir. Trois étapes, un seul copilote.
             </h2>
             <p className="mt-5 max-w-2xl text-base text-cream/75 leading-relaxed">
-              Revelo n'est pas un dashboard de plus. C'est une couche d'intelligence
-              qui transforme la donnée éparse en action commerciale prête à exécuter.
+              Revelo n'est pas un dashboard de plus. C'est la couche d'intelligence
+              qui transforme votre donnée éparse et le ressenti de vos CSM en plans
+              d'action IA personnalisés, livrés là où vos équipes travaillent déjà.
             </p>
           </RevealOnScroll>
 

@@ -5,48 +5,58 @@ export type FaqItem = {
 
 export const faqItems: FaqItem[] = [
   {
-    question: "Pourquoi Revelo plutôt que Gainsight ou Planhat ?",
+    question: "Qu'est-ce qu'un Health Score hybride, et pourquoi c'est différent ?",
     answer:
-      "Gainsight et Planhat sont des plateformes de Customer Success conçues pour le scoring de santé client. Revelo va plus loin : nous croisons les clauses contractuelles (dates, seuils, prix) avec l'usage produit en temps réel et nous générons l'argumentaire de renégociation. Time to value 18 fois plus rapide, et un agent qui agit au lieu de seulement résumer.",
+      "La plupart des outils CS calculent un score 100 % machine basé sur l'usage produit. Le retour terrain de nos 5 interviews dit la même chose : ce score rate les signaux humains (manager de transition côté client, désengagement du nouveau référent, sentiment négatif en QBR). Le Health Score hybride Revelo combine le score machine reproductible (usage, contrat, facturation, tickets, sentiment CR) et une notation collaborative hebdo des CSM, qui capture ce que la donnée ne sait pas dire. Le résultat : un score plus complet, et surtout des écarts détectés entre note humaine et score machine, qui sont les vrais signaux à traiter en priorité.",
+  },
+  {
+    question: "Et si mes CSM ne veulent pas noter chaque semaine ?",
+    answer:
+      "La notation collaborative est optionnelle. Le score machine fonctionne seul, la notation l'affine quand elle est là. Format conçu pour rester sous 5 minutes par CSM le vendredi : une note sur 10 par compte, un commentaire libre, deux drapeaux types préselectionnés (manager de transition, contact en départ). Si l'équipe n'adopte pas, Revelo reste utile en mode 100 % machine. Si elle adopte, on capture le signal différenciant numéro 1 du marché.",
+  },
+  {
+    question: "Comment l'agent IA propose-t-il des plans d'action ?",
+    answer:
+      "Pour chaque compte en zone rouge ou orange, l'agent tient compte du profil interlocuteur (direction vs ops), du type de problématique (budget, technique, relation), de l'historique de relation et des clauses contractuelles. Il propose alors un plan d'action concret : reprise de contact préventive avec un script de mail prêt, remise anticipée avec marge protégée, scénario de renégo avant échéance, ou escalade KAM. Le CSM lit, ajuste, déclenche. L'IA ne pousse jamais une action engageante toute seule.",
+  },
+  {
+    question: "Pourquoi Revelo si j'ai déjà Vitally, HubSpot ou Planhat ?",
+    answer:
+      "Vitally, HubSpot et Planhat consolident l'usage produit et automatisent le health score machine. C'est un excellent point de départ. Mais aucun ne capture le ressenti humain des CSM en équipe, et aucun ne génère des plans d'action IA personnalisés au profil interlocuteur. Revelo s'installe en complément, lit votre stack existant et ajoute les deux briques manquantes. Pas un nouvel outil de plus : un widget HubSpot ou Salesforce, et des alertes Slack.",
   },
   {
     question: "Combien de temps pour démarrer ?",
     answer:
-      "Le pilote SaaS Base est opérationnel en 10 jours ouvrés : connecteurs CRM et produit branchés, contrats clés indexés, premier rapport hebdo livré. Le palier API Advanced ajoute 1 à 2 semaines selon la complexité de l'environnement Salesforce ou Slack.",
+      "Pilote opérationnel en 10 jours ouvrés : connecteur HubSpot ou Salesforce branché, Stripe ou Pennylane synchronisé, Zendesk ou Intercom relié, contrats clés indexés, premier batch de plans d'action IA généré. Aucune saisie manuelle requise pendant ou après l'onboarding, c'est ça qui change vs Vitally ou Planhat.",
   },
   {
-    question: "Comment Revelo se connecte à mon Salesforce, Stripe et CRM ?",
+    question: "Quels connecteurs natifs en standard ?",
     answer:
-      "Nous proposons des connecteurs natifs pour Salesforce, HubSpot, Stripe, Pennylane, Sellsy et Qonto. L'agent Revelo réconcilie l'ID Salesforce, l'ID Produit et les facturations dans une table compte unique. Le palier API Advanced ouvre un webhook MCP qui permet d'orchestrer l'agent depuis n'importe quel outil compatible.",
+      "HubSpot en priorité (cible n° 1 sur nos interviews terrain, 3 interviewés sur 5), Salesforce, Stripe, Pennylane, Sellsy, Qonto, Zendesk et Intercom pour les tickets SAV. Pour les CR de réunion (extraction sentiment), connecteurs Modjo, Notta, Tactiq sur la roadmap. Le palier API Advanced ouvre un webhook MCP pour orchestrer l'agent depuis n'importe quel outil compatible.",
   },
   {
-    question: "Mes données contrat sont confidentielles, où sont-elles hébergées ?",
+    question: "Mes données contrat et CSM sont confidentielles, où sont-elles hébergées ?",
     answer:
-      "Hébergement intégral en Europe (OVH et Scaleway), conformité RGPD native, chiffrement AES-256 au repos et TLS 1.3 en transit. Les contrats PDF sont vectorisés sur nos serveurs européens et jamais envoyés à des fournisseurs LLM hors UE par défaut. Option d'inférence on-premise sur le palier Conseil.",
+      "Hébergement intégral en Europe (OVH et Scaleway), conformité RGPD native, chiffrement AES-256 au repos et TLS 1.3 en transit. Les contrats PDF sont vectorisés sur nos serveurs européens. Aucun envoi à des fournisseurs LLM hors UE par défaut. La notation collaborative des CSM reste dans votre tenant Revelo, jamais partagée hors de votre organisation.",
   },
   {
-    question: "Quel ROI typique sur les pilotes en cours ?",
+    question: "Quel ROI typique sur les pilotes ?",
     answer:
-      "Sur un éditeur 10 M€ d'ARR, nous visons +3 points de NRR (soit environ 300 k€ d'ARR sauvé) et 40 % de temps CSM économisé sur les tâches manuelles. Pendant la beta privée, l'accès est gratuit, donc le ROI est immédiat dès la première alerte sauvée.",
+      "Sur un éditeur 10 M€ d'ARR, l'objectif à valider en pilote est : +3 points de NRR (environ 300 k€ d'ARR sauvé), zéro saisie manuelle (40 % de temps CSM économisé) et capture des signaux humains qui passaient sous le radar (un compte sauvé par CSM par trimestre couvre déjà la mise). L'accès étant gratuit pendant la beta, le ROI est immédiat dès la première alerte sauvée.",
   },
   {
-    question: "Quel persona dans mon équipe utilise Revelo au quotidien ?",
+    question: "L'agent IA prend-il les décisions à la place du CSM ou du KAM ?",
     answer:
-      "Trois utilisateurs principaux : la CSM (Marie) reçoit les alertes Slack et pilote son portefeuille, le ou la RevOps (Sarah) consomme la table de contrats unifiée et le forecast 90 jours, le ou la KAM (Thomas) utilise le simulateur de scénarios et la Business Review pour négocier. Le CFO et le CRO consomment les rapports hebdo.",
+      "Non. Principe Revelo, validé par les 5 interviews terrain : l'IA suggère, l'humain décide. L'agent rédige le brief, score le risque, propose plusieurs plans d'action comparés avec arguments factuels. Le CSM ou le KAM lit, ajuste, déclenche. Aucun mail client n'est envoyé en autonome. Mode templates pré-définis en fallback pour le MVP, pour ne jamais laisser un CSM démuni.",
   },
   {
-    question: "Comment est calculé le score de risque ?",
+    question: "Et Tropic dans tout ça ? Vous vous battez contre eux ?",
     answer:
-      "Le score croise quatre signaux : rupture de tendance d'usage produit, fenêtre contractuelle à échéance (60 à 90 j), historique des tickets de support, et alignement engagement vs consommation réelle. Les pondérations sont auditables, et chaque alerte est accompagnée des trois signaux qui ont déclenché la bascule.",
+      "Non, Tropic arme les directions IT et achats côté acheteur pour négocier les renouvellements SaaS (15,5 % de savings en H1 2025 sur leur base). Le fait que Tropic ait construit un marché à plusieurs centaines de millions de dollars côté acheteur prouve que le marché symétrique côté fournisseur est ouvert, et que les directions financières des clients négocient désormais sur les contrats SaaS. Revelo répond à cette pression en outillant le CSM et le KAM, là où ils travaillent déjà.",
   },
   {
     question: "Quel coût après la beta ?",
     answer:
-      "L'accès pendant la beta est entièrement gratuit. À la sortie de beta, le pricing sera co-construit avec les pilotes (modèle par contrats gérés ou par siège, à arbitrer). Les pilotes beta auront une grille préférentielle et la possibilité de continuer gratuitement plusieurs mois.",
-  },
-  {
-    question: "Que se passe-t-il si je veux résilier ?",
-    answer:
-      "Pas d'engagement, désactivation immédiate, export complet de la donnée contrat et usage en CSV, JSON et Parquet. Suppression complète sous 30 jours, conformité RGPD article 17. Nous gardons les pilotes courts pour vous laisser tester sans pression.",
+      "L'accès pendant la beta est entièrement gratuit. À la sortie de beta, le pricing sera co-construit avec les pilotes. Les pilotes beta auront une grille préférentielle et la possibilité de continuer gratuitement plusieurs mois.",
   },
 ];

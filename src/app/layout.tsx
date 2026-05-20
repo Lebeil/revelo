@@ -19,18 +19,22 @@ const sourceSerif = Source_Serif_4({
 export const metadata: Metadata = {
   metadataBase: new URL("https://revelo-web.vercel.app"),
   title: {
-    default: "Revelo, l'agent IA qui anticipe les renégociations B2B",
+    default: "Revelo, le copilote de rétention CS, Health Score hybride et actions IA",
     template: "%s · Revelo",
   },
   description:
-    "Revelo croise contrats clients et usage produit pour détecter les risques 60 à 90 jours avant l'échéance, rédiger le brief KAM et sécuriser votre NRR. Conçu pour les éditeurs SaaS B2B mid-market français et européens.",
+    "Revelo fusionne le score machine (usage, contrat, facturation, support) et le ressenti CSM noté en équipe, puis propose des plans d'action IA personnalisés selon le profil interlocuteur. Intégré nativement à HubSpot et Salesforce. Conçu pour les éditeurs SaaS B2B mid-market FR et EU.",
   keywords: [
     "Customer Success",
+    "Health Score hybride",
+    "Notation collaborative CSM",
+    "Plans d'action IA",
+    "Rétention SaaS",
+    "Renouvellement B2B",
+    "Signal humain CSM",
+    "HubSpot CRM",
+    "Salesforce CRM",
     "NRR",
-    "renégociation B2B",
-    "SaaS",
-    "Gainsight alternative",
-    "Planhat alternative",
     "Revenue Operations",
     "Contract Intelligence",
     "KAM",
@@ -40,9 +44,9 @@ export const metadata: Metadata = {
   creator: "Revelo",
   publisher: "Revelo",
   openGraph: {
-    title: "Revelo, l'agent IA qui anticipe les renégociations B2B",
+    title: "Revelo, le copilote de rétention CS",
     description:
-      "Croisement contrats + usage produit, détection 60 à 90 jours avant l'échéance, brief KAM automatique. Pensé pour les éditeurs SaaS mid-market FR/EU.",
+      "Health Score hybride (score machine + ressenti CSM noté en équipe) et plans d'action IA personnalisés, intégrés dans HubSpot ou Salesforce. Pour les éditeurs SaaS B2B mid-market.",
     url: "/",
     siteName: "Revelo",
     locale: "fr_FR",
@@ -50,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Revelo, l'agent IA qui anticipe les renégociations B2B",
+    title: "Revelo, le copilote de rétention CS",
     description:
-      "Croisement contrats + usage, détection 60 à 90 jours avant l'échéance, brief KAM automatique.",
+      "Health Score hybride et plans d'action IA personnalisés, intégrés dans HubSpot et Salesforce.",
   },
   robots: { index: true, follow: true },
   category: "technology",

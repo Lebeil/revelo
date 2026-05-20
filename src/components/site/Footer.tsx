@@ -49,14 +49,15 @@ export function Footer() {
   return (
     <footer className="bg-midnight text-cream">
       <div className="section-shell">
-        <div className="section-inner-wide py-16">
+        <div className="section-inner-wide py-12 sm:py-16">
           <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
             <div className="space-y-5">
               <Logo variant="inverse" />
               <p className="max-w-sm text-sm text-cream/75 leading-relaxed">
-                L'agent IA qui croise contrats et usage produit pour
-                anticiper les renégociations B2B. Conçu pour les
-                éditeurs SaaS mid-market FR et EU.
+                Le copilote de rétention CS. Health Score hybride
+                (score machine + ressenti CSM noté) et plans d'action
+                IA personnalisés, pour les éditeurs SaaS B2B mid-market
+                FR et EU.
               </p>
               <div className="flex flex-col gap-2 text-sm text-cream/70">
                 <span className="inline-flex items-center gap-2">

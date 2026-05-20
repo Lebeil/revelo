@@ -4,7 +4,7 @@ import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="relative bg-cream py-24 lg:py-32">
+    <section id="testimonials" className="relative bg-cream py-16 sm:py-20 lg:py-32">
       <div className="section-shell">
         <div className="section-inner-wide">
           <RevealOnScroll>
@@ -20,8 +20,8 @@ export function TestimonialsSection() {
                   Pré-validation
                 </p>
                 <p className="mt-1 max-w-xs text-midnight/80 leading-relaxed">
-                  8 interviews qualitatives menées en mai 2026 auprès de Head of CS, KAM, RevOps et CFO.
-                  <span className="font-semibold text-teal"> 100 % reconnaissent la douleur, 6 sur 8 souhaitent tester.</span>
+                  5 interviews qualitatives menées en mai 2026 auprès de Head of CS, KAM, RevOps et co-fondateurs.
+                  <span className="font-semibold text-teal"> 5 sur 5 demandent une intégration native CRM, 5 sur 5 confirment que le ressenti humain est un signal différenciant.</span>
                 </p>
               </div>
             </div>

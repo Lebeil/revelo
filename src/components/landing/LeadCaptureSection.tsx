@@ -68,7 +68,7 @@ export function LeadCaptureSection() {
   return (
     <section
       id="lead"
-      className="relative overflow-hidden bg-midnight text-cream py-24 lg:py-32"
+      className="relative overflow-hidden bg-midnight text-cream py-16 sm:py-20 lg:py-32"
     >
       <div
         aria-hidden

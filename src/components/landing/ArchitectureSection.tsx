@@ -2,39 +2,39 @@ import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 import { ArrowRight, Database, MessageSquare, LayoutGrid, ServerCog } from "lucide-react";
 
 const sources = [
-  { label: "Salesforce, HubSpot", note: "ARR, opportunités, contacts" },
-  { label: "Stripe, Pennylane", note: "Facturation, paliers" },
-  { label: "Contrats PDF", note: "OCR + NER auto" },
-  { label: "Logs produit, télémétrie", note: "Usage, connexions, features" },
+  { label: "HubSpot, Salesforce", note: "ARR, opportunités, contacts, notes CSM" },
+  { label: "Stripe, Pennylane, Sellsy", note: "Facturation, paliers, retards de paiement" },
+  { label: "Zendesk, Intercom", note: "Tickets SAV, escalades, sentiment client" },
+  { label: "Modjo, Notta + Notation CSM", note: "Sentiment CR réunion + ressenti humain hebdo" },
 ];
 
 const surfaces = [
   {
-    title: "Alertes Slack natives",
-    persona: "Marie · CSM",
+    title: "Widget HubSpot embarqué",
+    persona: "Marie · CSM et Sarah · RevOps",
     description:
-      "Les CSM reçoivent les alertes directement dans #cs-revelo : score, signaux, lien vers le brief, action proposée.",
-    icon: MessageSquare,
-  },
-  {
-    title: "Widget Salesforce embed",
-    persona: "Sarah · RevOps / Thomas · KAM",
-    description:
-      "Le panneau Revelo s'affiche dans la fiche compte Salesforce : usage, clauses, scénarios, prêt à activer.",
+      "Le panneau Revelo s'affiche dans la fiche compte HubSpot : Health Score hybride, signaux humains, clauses contrat, plans d'action IA prêts à activer. Aucune saisie manuelle.",
     icon: LayoutGrid,
   },
   {
-    title: "Webhook MCP",
-    persona: "Tech leads, RevOps",
+    title: "Alertes Slack natives",
+    persona: "Marie · CSM",
     description:
-      "Branchez Revelo dans vos outils via MCP. Récupérez les briefs, lancez l'agent, orchestrez les playbooks.",
+      "Les CSM reçoivent les alertes dans #cs-revelo : score hybride bascule, écart machine vs humain détecté, plan d'action IA prêt avec lien vers le brief.",
+    icon: MessageSquare,
+  },
+  {
+    title: "Webhook MCP",
+    persona: "Tech leads et RevOps",
+    description:
+      "Branchez Revelo dans Slack, Salesforce, Teams ou un agent maison via MCP. Récupérez les plans d'action IA, déclenchez les rituels, orchestrez vos playbooks.",
     icon: ServerCog,
   },
 ];
 
 export function ArchitectureSection() {
   return (
-    <section id="architecture" className="relative bg-cream-soft py-24 lg:py-32">
+    <section id="architecture" className="relative bg-cream-soft py-16 sm:py-20 lg:py-32">
       <div className="section-shell">
         <div className="section-inner-wide">
           <RevealOnScroll>
@@ -46,8 +46,9 @@ export function ArchitectureSection() {
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
               Revelo s'infiltre dans votre stack existante. Une table compte unique réconcilie
-              Salesforce, facturation et usage. L'agent pousse ses alertes là où vous êtes :
-              Slack, Salesforce, Teams, e-mail, ou via webhook MCP.
+              HubSpot, Salesforce, Stripe, Zendesk, vos CR de réunion et la notation collaborative
+              CSM. L'agent pousse le plan d'action IA là où vous êtes : Slack, widget HubSpot,
+              e-mail ou webhook MCP.
             </p>
           </RevealOnScroll>
 
@@ -61,8 +62,8 @@ export function ArchitectureSection() {
                   Une table compte unique, réconciliée en temps réel
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-midnight/70">
-                  L'ID Salesforce, l'ID Produit, l'ID Stripe, la donnée juridique : un seul objet métier
-                  côté Revelo, prêt à consommer.
+                  L'ID HubSpot, l'ID Produit, l'ID Stripe, la note collaborative CSM, le sentiment
+                  extrait des CR : un seul objet métier côté Revelo, prêt à consommer.
                 </p>
 
                 <div className="mt-8 grid gap-4 md:grid-cols-[1fr_auto_1fr] md:items-stretch">
@@ -111,12 +112,16 @@ export function ArchitectureSection() {
                         <span>2026-09-12</span>
                       </p>
                       <p className="flex items-center justify-between">
-                        <span className="text-cream/55">usage_30d</span>
-                        <span className="text-destructive">-42 %</span>
+                        <span className="text-cream/55">score_machine</span>
+                        <span>78 / 100</span>
                       </p>
                       <p className="flex items-center justify-between">
-                        <span className="text-cream/55">risk_score</span>
-                        <span>89 / 100</span>
+                        <span className="text-cream/55">score_human</span>
+                        <span className="text-destructive">96 / 100</span>
+                      </p>
+                      <p className="flex items-center justify-between">
+                        <span className="text-cream/55">flag_csm</span>
+                        <span>manager_transition</span>
                       </p>
                     </div>
                   </div>

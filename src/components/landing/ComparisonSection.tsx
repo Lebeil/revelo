@@ -21,18 +21,19 @@ function ScoreDots({ score }: Readonly<{ score: number }>) {
 
 export function ComparisonSection() {
   return (
-    <section id="comparison" className="relative py-24 lg:py-32">
+    <section id="comparison" className="relative py-16 sm:py-20 lg:py-32">
       <div className="section-shell">
         <div className="section-inner-wide">
           <RevealOnScroll>
             <p className="eyebrow">Positionnement marché</p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-              Le seul outil qui croise contrats, usage et action commerciale
+              Le seul copilote qui fusionne score machine, ressenti CSM et plans d'action IA
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-              Gainsight prédit le churn. Planhat note la santé. Revelo écrit le brief de renégo
-              et déclenche le scénario de sauvegarde. Comparaison sur 5 critères qui pèsent
-              vraiment dans la décision board.
+              Gainsight et Vitally consolident l'usage. Skalin couvre le SMB. ChurnZero structure
+              les playbooks. Aucun ne combine score machine + ressenti humain noté en équipe + plans
+              d'action IA personnalisés selon le profil interlocuteur. Comparaison sur 5 critères
+              qui pèsent vraiment dans la décision board.
             </p>
           </RevealOnScroll>
 
@@ -127,17 +128,17 @@ export function ComparisonSection() {
               {
                 icon: Check,
                 title: "Ce que personne ne fait",
-                body: "Croiser clauses contractuelles et signaux d'usage produit dans un seul agent autonome.",
+                body: "Fusionner score machine, notation collaborative CSM et plans d'action IA personnalisés selon le profil interlocuteur.",
               },
               {
                 icon: Check,
                 title: "Notre cible",
-                body: "Éditeurs SaaS B2B 50 à 500 personnes, 5 à 50 M€ ARR, France et Europe.",
+                body: "Éditeurs SaaS B2B mid-market, 5 à 50 M€ ARR, équipés HubSpot ou Salesforce, France et Europe.",
               },
               {
                 icon: Minus,
                 title: "Hors scope assumé",
-                body: "Pas une CDP marketing, pas un outil de signature, pas un CSM-only pour SMB.",
+                body: "Pas une CDP marketing, pas un outil de signature, pas un CSM-only pour SMB <100 contrats.",
               },
             ].map((card, idx) => {
               const Icon = card.icon;

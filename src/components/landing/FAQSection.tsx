@@ -9,7 +9,7 @@ import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 
 export function FAQSection() {
   return (
-    <section id="faq" className="relative bg-cream-soft py-24 lg:py-32">
+    <section id="faq" className="relative bg-cream-soft py-16 sm:py-20 lg:py-32">
       <div className="section-shell">
         <div className="section-inner">
           <RevealOnScroll>
@@ -18,7 +18,7 @@ export function FAQSection() {
               Ce que les Head of CS, CFO et RevOps nous demandent en premier
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-              Les huit questions que nous voyons revenir en démo. Si la vôtre n'est pas listée,
+              Les questions qui reviennent en démo. Si la vôtre n'est pas listée,
               écrivez-nous : hello@revelo.io.
             </p>
           </RevealOnScroll>

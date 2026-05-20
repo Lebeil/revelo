@@ -3,17 +3,18 @@ import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 
 export function PainPointsSection() {
   return (
-    <section id="problem" className="relative py-24 lg:py-32">
+    <section id="problem" className="relative py-16 sm:py-20 lg:py-32">
       <div className="section-shell">
         <div className="section-inner">
           <RevealOnScroll>
             <p className="eyebrow">Pourquoi maintenant</p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-              Les équipes Revenue voient le risque arriver trop tard
+              Les CSM voient le risque arriver, mais trop tard et sans plan
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-              Renégociations gérées dans l'urgence, données client éparpillées, alignement Finance et Customer Success
-              qui tourne au goulot d'étranglement : trois douleurs structurelles qui coûtent la NRR.
+              Signaux humains non captés (manager de transition, désengagement nouveau référent),
+              plans d'action absents quand le compte passe en rouge, saisie manuelle impossible à
+              tenir au-delà de 100 comptes : trois douleurs structurelles qui coûtent la NRR.
             </p>
           </RevealOnScroll>
 
