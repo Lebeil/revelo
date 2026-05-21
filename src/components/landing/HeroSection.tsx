@@ -55,11 +55,11 @@ export function HeroSection() {
 
             <RevealOnScroll delay={0.1}>
               <p className="max-w-xl text-lg leading-relaxed text-midnight/75">
-                Revelo fusionne le <span className="font-semibold text-teal">score machine</span>{" "}
-                (usage, contrat, facturation, support) et le{" "}
-                <span className="font-semibold text-teal">ressenti CSM noté en équipe</span>, puis
-                propose un plan d'action IA personnalisé selon le profil interlocuteur. Intégré
-                nativement dans HubSpot ou Salesforce, pas un outil de plus.
+                <span className="font-semibold text-teal">Détectez</span> les comptes qui décrochent,{" "}
+                <span className="font-semibold text-teal">priorisez</span> ceux à risque avec le
+                Health Score hybride, <span className="font-semibold text-teal">déclenchez</span>{" "}
+                les bons plans d'action IA pour sécuriser le renouvellement. Intégré nativement
+                dans HubSpot et Salesforce.
               </p>
             </RevealOnScroll>
 

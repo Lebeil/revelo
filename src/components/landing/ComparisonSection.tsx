@@ -27,13 +27,14 @@ export function ComparisonSection() {
           <RevealOnScroll>
             <p className="eyebrow">Positionnement marché</p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-              Le seul copilote qui fusionne score machine, ressenti CSM et plans d'action IA
+              Pas seulement un score. Un copilote d'action.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
               Gainsight et Vitally consolident l'usage. Skalin couvre le SMB. ChurnZero structure
-              les playbooks. Aucun ne combine score machine + ressenti humain noté en équipe + plans
-              d'action IA personnalisés selon le profil interlocuteur. Comparaison sur 5 critères
-              qui pèsent vraiment dans la décision board.
+              les playbooks. Aucun ne combine <span className="font-semibold text-teal">ce que la donnée voit</span>,{" "}
+              <span className="font-semibold text-teal">ce que le CSM ressent</span> et{" "}
+              <span className="font-semibold text-teal">ce que l'équipe doit faire</span>.
+              Comparaison sur 5 critères qui pèsent vraiment dans la décision board.
             </p>
           </RevealOnScroll>
 

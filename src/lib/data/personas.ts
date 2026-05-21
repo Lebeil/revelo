@@ -45,7 +45,7 @@ export const personas: Persona[] = [
     role: "KAM",
     fullRole: "Strategic Account Manager",
     company: "Éditeur SaaS ETI 450 personnes",
-    arr: "12 grands comptes, 8,6 M€ ARR, renégociations à enjeu budgétaire",
+    arr: "12 grands comptes, 8,6 M€ ARR, renouvellements à enjeu budgétaire",
     pain: "Le compte est rouge depuis 3 semaines, je n'ai aucun plan d'action prêt. Je découvre le risque la veille de l'échéance.",
     metric: "Plan d'action IA personnalisé proposé sous 30 s, prêt à ajuster",
     ambition: "Avoir un agent qui propose le bon scénario (relance préventive, expansion, save) selon le profil interlocuteur, pas un dashboard de plus.",

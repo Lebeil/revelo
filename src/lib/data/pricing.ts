@@ -54,7 +54,7 @@ export const pricingTiers: PricingTier[] = [
     audience: "Équipes qui veulent industrialiser le rituel de notation et les plans d'action IA.",
     highlights: [
       "Audit de la donnée contrat, usage et CR de réunion (2 semaines)",
-      "Mise en place des playbooks save, expansion, renégo",
+      "Mise en place des playbooks save, expansion, renouvellement anticipé",
       "Animation des rituels de notation CSM hebdo",
       "Engagement résultats sur la NRR à 6 mois (objectif co-construit)",
     ],

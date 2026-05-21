@@ -17,7 +17,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Comment l'agent IA propose-t-il des plans d'action ?",
     answer:
-      "Pour chaque compte en zone rouge ou orange, l'agent tient compte du profil interlocuteur (direction vs ops), du type de problématique (budget, technique, relation), de l'historique de relation et des clauses contractuelles. Il propose alors un plan d'action concret : reprise de contact préventive avec un script de mail prêt, remise anticipée avec marge protégée, scénario de renégo avant échéance, ou escalade KAM. Le CSM lit, ajuste, déclenche. L'IA ne pousse jamais une action engageante toute seule.",
+      "Pour chaque compte en zone rouge ou orange, l'agent tient compte du profil interlocuteur (direction vs ops), du type de problématique (budget, technique, relation), de l'historique de relation et des clauses contractuelles. Il propose alors un plan d'action concret : reprise de contact préventive avec un script de mail prêt, remise anticipée avec marge protégée, conversation de renouvellement anticipée, ou escalade vers un account manager senior. Le CSM lit, ajuste, déclenche. L'IA ne pousse jamais une action engageante toute seule.",
   },
   {
     question: "Pourquoi Revelo si j'ai déjà Vitally, HubSpot ou Planhat ?",

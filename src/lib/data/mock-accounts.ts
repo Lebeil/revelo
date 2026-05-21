@@ -192,7 +192,7 @@ export const accounts: Account[] = [
     risk: "Élevé",
     renewalDate: "04 août 2026",
     daysToRenewal: 39,
-    recommendation: "Plan d'action IA brief KAM sous 14 jours",
+    recommendation: "Plan d'action IA reprise contact sous 14 jours",
     signals: [
       { label: "Stakeholder changé", detail: "Nouveau Head of Data depuis avril", kind: "human" },
       { label: "Concurrent évoqué", detail: "Looker mentionné dans 3 tickets", kind: "human" },

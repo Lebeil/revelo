@@ -1,13 +1,13 @@
-import { Radar, Shuffle, Sparkles, ArrowRight } from "lucide-react";
+import { Radar, ListOrdered, Sparkles, ArrowRight } from "lucide-react";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 
 const steps = [
   {
-    id: "capture",
-    title: "Capter",
+    id: "detect",
+    title: "Détecter",
     icon: Radar,
     description:
-      "Revelo aspire en continu les signaux machine et les signaux humains de votre stack existante. Pas de saisie manuelle, pas de nouvel outil à ouvrir.",
+      "Revelo regroupe les signaux clés de chaque compte : usage produit, support, historique relationnel, échéances de renouvellement et ressenti du CSM. Aucune saisie manuelle.",
     bullets: [
       "HubSpot, Salesforce, Stripe, Pennylane, Zendesk",
       "Sentiment extrait des CR de réunion (Modjo, Notta)",
@@ -15,11 +15,11 @@ const steps = [
     ],
   },
   {
-    id: "cross",
-    title: "Croiser",
-    icon: Shuffle,
+    id: "prioritize",
+    title: "Prioriser",
+    icon: ListOrdered,
     description:
-      "Score machine reproductible + ressenti humain noté en équipe = Health Score hybride. Les écarts entre les deux deviennent les vrais signaux à traiter.",
+      "Le Health Score hybride fusionne machine et ressenti humain pour faire ressortir les comptes sains, fragiles ou urgents à traiter. Vous savez où agir en premier.",
     bullets: [
       "Score rouge, orange, vert priorisé chaque matin",
       "Détection des écarts machine vs humain",
@@ -31,11 +31,11 @@ const steps = [
     title: "Agir",
     icon: Sparkles,
     description:
-      "Pour chaque compte en zone rouge, l'agent IA propose un plan d'action personnalisé selon le profil interlocuteur. Vous lisez, ajustez, déclenchez.",
+      "Pour chaque compte en zone rouge, Revelo recommande les actions à mener pour réengager le client et sécuriser le renouvellement. Vous lisez, ajustez, déclenchez.",
     bullets: [
       "Reprise contact préventive scriptée",
       "Remise anticipée avec marge protégée",
-      "Scénario renégo ou escalade KAM, prêts à activer",
+      "Plans d'action IA contextualisés selon le profil interlocuteur",
     ],
   },
 ];
@@ -58,7 +58,7 @@ export function SolutionSection() {
               <span className="bg-orange" />La méthode Revelo
             </p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-cream sm:text-4xl">
-              Capter, croiser, agir. Trois étapes, un seul copilote.
+              Détecter, prioriser, agir. Trois étapes, un seul copilote.
             </h2>
             <p className="mt-5 max-w-2xl text-base text-cream/75 leading-relaxed">
               Revelo n'est pas un dashboard de plus. C'est la couche d'intelligence

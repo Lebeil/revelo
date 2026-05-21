@@ -68,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html lang="fr" data-scroll-behavior="smooth" className={`${inter.variable} ${sourceSerif.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <TooltipProvider delayDuration={120}>{children}</TooltipProvider>
         <Toaster position="bottom-right" richColors />
