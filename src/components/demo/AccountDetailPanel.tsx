@@ -1,5 +1,24 @@
-import { CalendarDays, TrendingDown, UserRound, Activity, Users } from "lucide-react";
+"use client";
+
+import {
+  CalendarDays,
+  TrendingDown,
+  UserRound,
+  Activity,
+  Users,
+  MessageSquare,
+  Sparkles,
+  FileSearch,
+  Bell,
+  ListTree,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { ContractIntelligenceCard } from "./ContractIntelligenceCard";
 import { UsageChart } from "./UsageChart";
 import { AgentBriefCard } from "./AgentBriefCard";
@@ -18,7 +37,32 @@ function signalChip(signal: Signal) {
   return "border-teal/20 bg-teal/5 text-teal";
 }
 
+function PanelHeading({
+  Icon,
+  title,
+  hint,
+}: Readonly<{
+  Icon: typeof Activity;
+  title: string;
+  hint?: string;
+}>) {
+  return (
+    <div className="flex items-center gap-3">
+      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-teal/10 text-teal">
+        <Icon size={16} />
+      </span>
+      <div className="text-left">
+        <p className="display-serif text-base text-midnight sm:text-lg">{title}</p>
+        {hint && <p className="text-[11px] text-midnight/55">{hint}</p>}
+      </div>
+    </div>
+  );
+}
+
 export function AccountDetailPanel({ account }: Readonly<AccountDetailPanelProps>) {
+  const humanSignalsCount = account.signals.filter((s) => s.kind === "human").length;
+  const machineSignalsCount = account.signals.filter((s) => s.kind === "machine").length;
+
   return (
     <section className="space-y-5">
       <article className="rounded-2xl border border-cream-deep bg-card p-6">
@@ -79,65 +123,149 @@ export function AccountDetailPanel({ account }: Readonly<AccountDetailPanelProps
             </p>
           </div>
         </div>
-
-        <div className="mt-5 grid gap-3 md:grid-cols-2 lg:grid-cols-4">
-          {account.signals.map((signal) => (
-            <div
-              key={signal.label}
-              className={cn(
-                "rounded-xl border px-4 py-3",
-                signalChip(signal)
-              )}
-            >
-              <div className="flex items-center justify-between">
-                <p className="text-[10px] font-semibold uppercase tracking-widest">
-                  {signal.kind === "human" ? "Signal humain" : "Signal machine"}
-                </p>
-                {signal.delta && (
-                  <span className="text-[11px] font-semibold">{signal.delta}</span>
-                )}
-              </div>
-              <p className="mt-2 text-sm font-semibold text-midnight">{signal.label}</p>
-              <p className="mt-1 text-xs text-midnight/70">{signal.detail}</p>
-            </div>
-          ))}
-        </div>
       </article>
 
-      <div className="grid gap-5 lg:grid-cols-[1.2fr_1fr]">
-        <ContractIntelligenceCard clauses={account.contract} />
-        <article className="flex flex-col gap-3 rounded-2xl border border-cream-deep bg-card p-6">
-          <header className="flex items-center justify-between">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-orange-deep">
-                Usage produit
-              </p>
-              <h3 className="display-serif text-lg text-midnight">
-                Sessions hebdo · 8 dernières semaines
-              </h3>
+      <Accordion
+        type="multiple"
+        defaultValue={[]}
+        className="space-y-3"
+      >
+        <AccordionItem
+          value="signals"
+          className="overflow-hidden rounded-2xl border border-cream-deep bg-card px-5"
+        >
+          <AccordionTrigger className="py-4 hover:no-underline">
+            <PanelHeading
+              Icon={ListTree}
+              title="Signaux détectés"
+              hint={`${humanSignalsCount} humain · ${machineSignalsCount} machine`}
+            />
+          </AccordionTrigger>
+          <AccordionContent className="pb-5">
+            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+              {account.signals.map((signal) => (
+                <div
+                  key={signal.label}
+                  className={cn(
+                    "rounded-xl border px-4 py-3",
+                    signalChip(signal)
+                  )}
+                >
+                  <div className="flex items-center justify-between">
+                    <p className="text-[10px] font-semibold uppercase tracking-widest">
+                      {signal.kind === "human" ? "Signal humain" : "Signal machine"}
+                    </p>
+                    {signal.delta && (
+                      <span className="text-[11px] font-semibold">{signal.delta}</span>
+                    )}
+                  </div>
+                  <p className="mt-2 text-sm font-semibold text-midnight">{signal.label}</p>
+                  <p className="mt-1 text-xs text-midnight/70">{signal.detail}</p>
+                </div>
+              ))}
             </div>
-            <TrendingDown size={18} className="text-orange-deep" />
-          </header>
-          <UsageChart data={account.usageSeries} delta={account.usageDelta} />
-          <p className="text-xs leading-relaxed text-midnight/60">
-            La rupture de tendance, croisée avec le ressenti CSM et les clauses contractuelles,
-            déclenche le plan d'action IA personnalisé selon le profil interlocuteur.
-          </p>
-          <div className="mt-2 flex items-start gap-2 rounded-lg border border-cream-deep bg-cream-soft p-3">
-            <Activity size={14} className="mt-0.5 shrink-0 text-teal" />
-            <p className="text-xs text-midnight/75">
-              Le score hybride pondère 60 % la machine et 40 % le ressenti humain, paramétrable par
-              équipe.
-            </p>
-          </div>
-        </article>
-      </div>
+          </AccordionContent>
+        </AccordionItem>
 
-      <AgentBriefCard brief={account.brief} machineScore={account.machineScore} humanScore={account.humanScore} />
+        <AccordionItem
+          value="brief"
+          className="overflow-hidden rounded-2xl border border-cream-deep bg-card px-5"
+        >
+          <AccordionTrigger className="py-4 hover:no-underline">
+            <PanelHeading
+              Icon={Sparkles}
+              title="Brief IA hybride"
+              hint="Synthèse machine + humain générée par Revelo"
+            />
+          </AccordionTrigger>
+          <AccordionContent className="pb-5">
+            <AgentBriefCard
+              brief={account.brief}
+              machineScore={account.machineScore}
+              humanScore={account.humanScore}
+            />
+          </AccordionContent>
+        </AccordionItem>
 
-      {account.scenarios.length > 0 && <ScenarioSimulator scenarios={account.scenarios} />}
+        {account.scenarios.length > 0 && (
+          <AccordionItem
+            value="plans"
+            className="overflow-hidden rounded-2xl border border-orange/30 bg-orange/5 px-5"
+          >
+            <AccordionTrigger className="py-4 hover:no-underline">
+              <PanelHeading
+                Icon={Sparkles}
+                title="Actions proposées par Revelo, à valider"
+                hint={`${account.scenarios.length} plans d'action IA personnalisés`}
+              />
+            </AccordionTrigger>
+            <AccordionContent className="pb-5">
+              <ScenarioSimulator scenarios={account.scenarios} />
+            </AccordionContent>
+          </AccordionItem>
+        )}
 
-      <SlackAlertPreview message={account.slack} />
+        <AccordionItem
+          value="contract"
+          className="overflow-hidden rounded-2xl border border-cream-deep bg-card px-5"
+        >
+          <AccordionTrigger className="py-4 hover:no-underline">
+            <PanelHeading
+              Icon={FileSearch}
+              title="Contract Intelligence"
+              hint="Clauses extraites par OCR + NER"
+            />
+          </AccordionTrigger>
+          <AccordionContent className="pb-5">
+            <ContractIntelligenceCard clauses={account.contract} />
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem
+          value="usage"
+          className="overflow-hidden rounded-2xl border border-cream-deep bg-card px-5"
+        >
+          <AccordionTrigger className="py-4 hover:no-underline">
+            <PanelHeading
+              Icon={TrendingDown}
+              title="Usage produit"
+              hint={`Sessions hebdo · ${account.usageDelta}`}
+            />
+          </AccordionTrigger>
+          <AccordionContent className="pb-5">
+            <div className="flex flex-col gap-3 rounded-2xl border border-cream-deep bg-cream-soft p-5">
+              <UsageChart data={account.usageSeries} delta={account.usageDelta} />
+              <p className="text-xs leading-relaxed text-midnight/60">
+                La rupture de tendance, croisée avec le ressenti CSM et les clauses contractuelles,
+                déclenche le plan d&apos;action IA personnalisé selon le profil interlocuteur.
+              </p>
+              <div className="mt-1 flex items-start gap-2 rounded-lg border border-cream-deep bg-card p-3">
+                <Activity size={14} className="mt-0.5 shrink-0 text-teal" />
+                <p className="text-xs text-midnight/75">
+                  Le score hybride pondère 60 % la machine et 40 % le ressenti humain, paramétrable
+                  par équipe.
+                </p>
+              </div>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem
+          value="slack"
+          className="overflow-hidden rounded-2xl border border-cream-deep bg-card px-5"
+        >
+          <AccordionTrigger className="py-4 hover:no-underline">
+            <PanelHeading
+              Icon={Bell}
+              title="Alerte Slack envoyée"
+              hint={`Canal ${account.slack.channel} · ${account.slack.time}`}
+            />
+          </AccordionTrigger>
+          <AccordionContent className="pb-5">
+            <SlackAlertPreview message={account.slack} />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </section>
   );
 }

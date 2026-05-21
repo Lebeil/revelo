@@ -39,8 +39,8 @@ export const pricingTiers: PricingTier[] = [
     highlights: [
       "Widget Revelo embarqué dans la fiche compte HubSpot",
       "Webhook MCP pour orchestrer l'agent depuis Salesforce ou Slack",
-      "Connecteurs Stripe, Pennylane, Sellsy, Qonto natifs",
-      "Synchronisation Zendesk et Intercom pour le sentiment SAV",
+      "Connecteurs Amplitude, Mixpanel, Stripe, Chargebee natifs",
+      "Synchronisation Zendesk pour le CSAT et les tickets",
     ],
     cta: "Demander la doc API",
     featured: true,

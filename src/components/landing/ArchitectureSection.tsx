@@ -2,10 +2,12 @@ import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 import { ArrowRight, Database, MessageSquare, LayoutGrid, ServerCog } from "lucide-react";
 
 const sources = [
-  { label: "HubSpot, Salesforce", note: "ARR, opportunités, contacts, notes CSM" },
-  { label: "Mixpanel, Amplitude, Snowflake", note: "Usage produit, logs, licences engagées vs consommées" },
-  { label: "Stripe, Pennylane, Zendesk, Intercom", note: "Facturation, paliers, tickets SAV" },
-  { label: "Notation CSM + Modjo, Notta", note: "Ressenti humain hebdo + sentiment CR réunion" },
+  { label: "HubSpot, Salesforce", note: "CRM cible, contacts, opportunités, notes CSM" },
+  { label: "Amplitude, Mixpanel", note: "Usage produit, connexions, features activées" },
+  { label: "Stripe, Chargebee", note: "ARR, facturation, paliers, retards de paiement" },
+  { label: "Zendesk", note: "CSAT et tickets support, escalades" },
+  { label: "Gong.io, Modjo", note: "Sentiment extrait des CR de réunion" },
+  { label: "Formulaire interne", note: "Notation collaborative CSM hebdo" },
 ];
 
 const surfaces = [
@@ -46,9 +48,10 @@ export function ArchitectureSection() {
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
               Revelo s'infiltre dans votre stack existante. Une table compte unique réconcilie
-              HubSpot, Salesforce, Mixpanel ou Snowflake, Stripe, Zendesk, vos CR de réunion
-              et la notation collaborative CSM. L'agent pousse le plan d'action IA et l'email
-              pré-rédigé là où vous travaillez : widget HubSpot, alertes Slack, webhook MCP.
+              HubSpot ou Salesforce, Amplitude ou Mixpanel pour l'usage, Stripe ou Chargebee pour
+              l'ARR, Zendesk pour le support, Gong.io ou Modjo pour le sentiment CR et la notation
+              collaborative CSM. L'agent pousse le plan d'action IA et l'email pré-rédigé là où vous
+              travaillez : widget HubSpot, alertes Slack, webhook MCP.
             </p>
           </RevealOnScroll>
 

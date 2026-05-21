@@ -9,9 +9,9 @@ const steps = [
     description:
       "Revelo regroupe les signaux clés de chaque compte : usage produit, support, historique relationnel, échéances de renouvellement et ressenti du CSM. Aucune saisie manuelle.",
     bullets: [
-      "HubSpot, Salesforce, Stripe, Pennylane, Zendesk",
-      "Sentiment extrait des CR de réunion (Modjo, Notta)",
-      "Notation collaborative CSM, 5 min le vendredi",
+      "Usage (Amplitude, Mixpanel), CSAT (Zendesk), ARR (Stripe, Chargebee)",
+      "Sentiment extrait des CR de réunion (Gong.io, Modjo)",
+      "Notation collaborative CSM via formulaire interne, 5 min le vendredi",
     ],
   },
   {

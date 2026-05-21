@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { ArrowLeft, Sparkles, Calendar, Menu } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowLeft, Sparkles, Calendar, Menu, CalendarDays } from "lucide-react";
 import { Logo } from "@/components/site/Logo";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,8 +15,23 @@ import {
 } from "@/components/ui/sheet";
 import { SidebarNav, SidebarUserCard } from "./DashboardSidebar";
 
+function formatTodayFr() {
+  const formatter = new Intl.DateTimeFormat("fr-FR", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+  return formatter.format(new Date());
+}
+
 export function DemoTopBar() {
   const [open, setOpen] = useState(false);
+  const [today, setToday] = useState<string>("");
+
+  useEffect(() => {
+    setToday(formatTodayFr());
+  }, []);
 
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between gap-3 border-b border-cream-deep bg-cream/95 px-4 backdrop-blur sm:px-5 lg:pl-8 lg:pr-6">
@@ -81,6 +96,12 @@ export function DemoTopBar() {
             <span className="sm:hidden">Démo</span>
           </Link>
         </Button>
+        {today && (
+          <span className="hidden items-center gap-1.5 rounded-full bg-cream-deep/60 px-3 py-1 text-[11px] font-semibold text-midnight/75 md:inline-flex">
+            <CalendarDays size={11} className="text-teal" />
+            <span className="capitalize">{today}</span>
+          </span>
+        )}
         <span className="hidden items-center gap-1 rounded-full border border-orange/30 bg-orange/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-orange-deep md:inline-flex">
           <Sparkles size={10} />
           Données simulées

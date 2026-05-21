@@ -13,6 +13,7 @@ import {
   Users,
   UsersRound,
 } from "lucide-react";
+import { toast } from "sonner";
 import { Logo } from "@/components/site/Logo";
 import { cn } from "@/lib/utils";
 
@@ -21,6 +22,8 @@ type NavItem = {
   label: string;
   href: string;
   active?: boolean;
+  soon?: boolean;
+  badge?: string;
 };
 
 type NavGroup = {
@@ -32,20 +35,20 @@ export const navGroups: NavGroup[] = [
   {
     label: "Pilotage",
     items: [
-      { icon: AlarmClock, label: "Top du jour, score hybride", href: "#risque", active: true },
-      { icon: TrendingUp, label: "Forecast renouvellement", href: "#forecast" },
-      { icon: Sparkles, label: "Plans d'action IA", href: "#plans" },
-      { icon: FileText, label: "Contrats indexés", href: "#contrats" },
-      { icon: ChartLine, label: "Rapport hebdo", href: "#hebdo" },
+      { icon: AlarmClock, label: "Top du jour, score hybride", href: "#risque", active: true, badge: "9" },
+      { icon: TrendingUp, label: "Forecast renouvellement", href: "#kpi" },
+      { icon: Sparkles, label: "Plans d'action IA", href: "#portfolio-actions" },
+      { icon: FileText, label: "Contrats indexés", href: "#", soon: true },
+      { icon: ChartLine, label: "Rapport hebdo", href: "#", soon: true },
     ],
   },
   {
     label: "Équipe",
     items: [
       { icon: UsersRound, label: "Notation collaborative", href: "#notation" },
-      { icon: Users, label: "Portefeuilles CSM", href: "#csm" },
-      { icon: LifeBuoy, label: "Support Revelo", href: "#support" },
-      { icon: Settings, label: "Paramètres", href: "#params" },
+      { icon: Users, label: "Portefeuilles CSM", href: "#", soon: true },
+      { icon: LifeBuoy, label: "Support Revelo", href: "mailto:hello@revelo.io" },
+      { icon: Settings, label: "Paramètres", href: "#", soon: true },
     ],
   },
 ];
@@ -53,6 +56,10 @@ export const navGroups: NavGroup[] = [
 type SidebarNavProps = {
   onItemClick?: () => void;
 };
+
+function notifySoon(label: string) {
+  toast.info(`${label} : section disponible à la sortie de beta, prévue juin 2026.`);
+}
 
 export function SidebarNav({ onItemClick }: Readonly<SidebarNavProps>) {
   return (
@@ -65,6 +72,26 @@ export function SidebarNav({ onItemClick }: Readonly<SidebarNavProps>) {
           <ul className="mt-3 space-y-1">
             {group.items.map((item) => {
               const Icon = item.icon;
+              if (item.soon) {
+                return (
+                  <li key={item.label}>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        notifySoon(item.label);
+                        onItemClick?.();
+                      }}
+                      className="group flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-midnight/45 transition-colors hover:bg-cream-soft hover:text-midnight/65"
+                    >
+                      <Icon size={16} className="text-midnight/35" />
+                      <span className="flex-1 text-left">{item.label}</span>
+                      <span className="rounded-full bg-cream-deep/70 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-midnight/55">
+                        Bientôt
+                      </span>
+                    </button>
+                  </li>
+                );
+              }
               return (
                 <li key={item.label}>
                   <Link
@@ -78,10 +105,10 @@ export function SidebarNav({ onItemClick }: Readonly<SidebarNavProps>) {
                     )}
                   >
                     <Icon size={16} className={item.active ? "text-orange" : ""} />
-                    <span>{item.label}</span>
-                    {item.active && (
-                      <span className="ml-auto rounded-full bg-orange px-2 py-0.5 text-[10px] font-semibold text-midnight">
-                        9
+                    <span className="flex-1">{item.label}</span>
+                    {item.badge && (
+                      <span className="rounded-full bg-orange px-2 py-0.5 text-[10px] font-semibold text-midnight">
+                        {item.badge}
                       </span>
                     )}
                   </Link>

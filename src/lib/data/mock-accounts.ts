@@ -466,11 +466,52 @@ export const accounts: Account[] = [
   },
 ];
 
-export const portfolioKpis = [
-  { label: "ARR à risque", value: "1,84 M€", trend: "+12 % sur 30 j", tone: "warn" as const },
-  { label: "Comptes en alerte", value: "9", trend: "+3 cette semaine", tone: "warn" as const },
-  { label: "Écarts machine vs humain", value: "4", trend: "À traiter ce vendredi", tone: "warn" as const },
-  { label: "Plans d'action IA livrés", value: "37", trend: "Cette semaine", tone: "ok" as const },
+export type PortfolioKpi = {
+  id: "arr-risk" | "alerts" | "gaps" | "plans";
+  label: string;
+  value: string;
+  trend: string;
+  tone: "warn" | "ok" | "neutral";
+  description: string;
+};
+
+export const portfolioKpis: PortfolioKpi[] = [
+  {
+    id: "arr-risk",
+    label: "ARR à risque",
+    value: "1,84 M€",
+    trend: "+12 % sur 30 j",
+    tone: "warn",
+    description:
+      "Revenu récurrent menacé sur les comptes Critique et Élevé du portefeuille, fenêtre de renouvellement 90 jours.",
+  },
+  {
+    id: "alerts",
+    label: "Comptes en alerte",
+    value: "9",
+    trend: "+3 cette semaine",
+    tone: "warn",
+    description:
+      "Comptes dont le score hybride est passé en rouge ou orange dans les 30 derniers jours.",
+  },
+  {
+    id: "gaps",
+    label: "Écarts machine vs humain",
+    value: "4",
+    trend: "À traiter ce vendredi",
+    tone: "warn",
+    description:
+      "Comptes où le ressenti CSM diffère du score machine de plus de 30 points. C'est le signal différenciant qu'aucun autre outil ne capte.",
+  },
+  {
+    id: "plans",
+    label: "Plans d'action IA livrés",
+    value: "37",
+    trend: "Cette semaine",
+    tone: "ok",
+    description:
+      "Plans d'action contextualisés générés par l'agent IA sur les 7 derniers jours, validés par l'équipe CSM.",
+  },
 ];
 
 export const riskRingClass: Record<AccountRisk, string> = {
