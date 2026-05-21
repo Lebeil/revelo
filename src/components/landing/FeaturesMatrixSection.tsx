@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight, Cpu, Inbox, Workflow } from "lucide-react";
-import { features } from "@/lib/data/features";
+import { ArrowUpRight, ChevronDown, Cpu, Inbox, Workflow } from "lucide-react";
+import { features, type Feature } from "@/lib/data/features";
 import { personas, type Persona } from "@/lib/data/personas";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -27,6 +27,94 @@ const personaStripe: Record<Persona["color"], { ring: string; chip: string; badg
   },
 };
 
+function FeatureCard({
+  feature,
+  stripeRing,
+  stripeChip,
+}: Readonly<{
+  feature: Feature;
+  stripeRing: string;
+  stripeChip: string;
+}>) {
+  const [expanded, setExpanded] = useState(false);
+  const Icon = feature.icon;
+
+  return (
+    <article
+      className={cn(
+        "relative h-full overflow-hidden rounded-2xl border border-cream-deep bg-card p-6",
+        "before:absolute before:left-0 before:top-6 before:bottom-6 before:w-1 before:rounded-r",
+        stripeRing
+      )}
+    >
+      <div className="flex items-start justify-between">
+        <span className={cn("inline-flex h-11 w-11 items-center justify-center rounded-xl", stripeChip)}>
+          <Icon size={20} />
+        </span>
+        <span className="text-[11px] font-mono text-midnight/45">F0{feature.index}</span>
+      </div>
+
+      <h4 className="mt-5 display-serif text-lg text-midnight">{feature.title}</h4>
+
+      <div className="mt-4 flex items-start gap-2">
+        <ArrowUpRight size={14} className="mt-0.5 shrink-0 text-orange" />
+        <p className="text-sm leading-relaxed text-midnight/85">{feature.output}</p>
+      </div>
+
+      <div className="mt-5 flex flex-wrap items-center gap-2">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-cream-soft px-3 py-1 text-[11px] font-semibold text-teal">
+          <span className="ticker-dot" aria-hidden />
+          {feature.delta}
+        </span>
+        <button
+          type="button"
+          onClick={() => setExpanded((value) => !value)}
+          className="inline-flex items-center gap-1 rounded-full border border-cream-deep px-3 py-1 text-[11px] font-semibold text-midnight/65 transition hover:border-orange/40 hover:text-orange-deep"
+          aria-expanded={expanded}
+        >
+          {expanded ? "Masquer le détail" : "Voir le détail technique"}
+          <ChevronDown
+            size={12}
+            className={cn("transition-transform", expanded && "rotate-180")}
+          />
+        </button>
+      </div>
+
+      {expanded && (
+        <div className="mt-5 space-y-3 border-t border-cream-deep pt-5 text-xs">
+          <div className="flex items-start gap-2">
+            <Inbox size={14} className="mt-0.5 shrink-0 text-midnight/40" />
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-midnight/55">
+                Entrées
+              </p>
+              <p className="mt-0.5 text-midnight/80">{feature.inputs.join(", ")}</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <Cpu size={14} className="mt-0.5 shrink-0 text-midnight/40" />
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-midnight/55">
+                Moteur IA
+              </p>
+              <p className="mt-0.5 text-midnight/80">{feature.engine}</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <Workflow size={14} className="mt-0.5 shrink-0 text-orange" />
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-wider text-orange-deep">
+                Valeur métier
+              </p>
+              <p className="mt-0.5 text-midnight/85">{feature.value}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </article>
+  );
+}
+
 export function FeaturesMatrixSection() {
   const [active, setActive] = useState<Persona["id"]>("marie");
 
@@ -42,6 +130,7 @@ export function FeaturesMatrixSection() {
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
               Revelo embarque six modules taillés pour les rôles qui vivent la rétention contractuelle au quotidien.
               CSM, RevOps, KAM : chacun reçoit la bonne information au bon endroit, au bon moment.
+              Cliquez sur « Voir le détail technique » pour afficher les sources et le moteur de chaque module.
             </p>
           </RevealOnScroll>
 
@@ -114,75 +203,14 @@ export function FeaturesMatrixSection() {
                       </div>
 
                       <div className="grid gap-5 md:grid-cols-2">
-                        {personaFeatures.map((feature) => {
-                          const Icon = feature.icon;
-                          return (
-                            <article
-                              key={feature.id}
-                              className={cn(
-                                "relative h-full overflow-hidden rounded-2xl border border-cream-deep bg-card p-6",
-                                "before:absolute before:left-0 before:top-6 before:bottom-6 before:w-1 before:rounded-r",
-                                stripe.ring
-                              )}
-                            >
-                              <div className="flex items-start justify-between">
-                                <span className={cn("inline-flex h-11 w-11 items-center justify-center rounded-xl", stripe.chip)}>
-                                  <Icon size={20} />
-                                </span>
-                                <span className="text-[11px] font-mono text-midnight/45">
-                                  F0{feature.index}
-                                </span>
-                              </div>
-                              <h4 className="mt-5 display-serif text-lg text-midnight">{feature.title}</h4>
-
-                              <div className="mt-5 space-y-3 text-xs">
-                                <div className="flex items-start gap-2">
-                                  <Inbox size={14} className="mt-0.5 shrink-0 text-midnight/40" />
-                                  <div>
-                                    <p className="font-semibold uppercase tracking-wider text-midnight/55 text-[10px]">
-                                      Entrées
-                                    </p>
-                                    <p className="mt-0.5 text-midnight/80">
-                                      {feature.inputs.join(", ")}
-                                    </p>
-                                  </div>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                  <Cpu size={14} className="mt-0.5 shrink-0 text-midnight/40" />
-                                  <div>
-                                    <p className="font-semibold uppercase tracking-wider text-midnight/55 text-[10px]">
-                                      Moteur IA
-                                    </p>
-                                    <p className="mt-0.5 text-midnight/80">{feature.engine}</p>
-                                  </div>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                  <ArrowUpRight size={14} className="mt-0.5 shrink-0 text-midnight/40" />
-                                  <div>
-                                    <p className="font-semibold uppercase tracking-wider text-midnight/55 text-[10px]">
-                                      Output utilisateur
-                                    </p>
-                                    <p className="mt-0.5 text-midnight/80">{feature.output}</p>
-                                  </div>
-                                </div>
-                                <div className="flex items-start gap-2">
-                                  <Workflow size={14} className="mt-0.5 shrink-0 text-orange" />
-                                  <div>
-                                    <p className="font-semibold uppercase tracking-wider text-orange-deep text-[10px]">
-                                      Valeur métier
-                                    </p>
-                                    <p className="mt-0.5 text-midnight/85">{feature.value}</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-cream-soft px-3 py-1 text-[11px] font-semibold text-teal">
-                                <span className="ticker-dot" aria-hidden />
-                                {feature.delta}
-                              </div>
-                            </article>
-                          );
-                        })}
+                        {personaFeatures.map((feature) => (
+                          <FeatureCard
+                            key={feature.id}
+                            feature={feature}
+                            stripeRing={stripe.ring}
+                            stripeChip={stripe.chip}
+                          />
+                        ))}
                       </div>
                     </div>
                   </TabsContent>

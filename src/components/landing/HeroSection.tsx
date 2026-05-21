@@ -5,9 +5,16 @@ import { Badge } from "@/components/ui/badge";
 import { HeroDashboardPreview } from "./HeroDashboardPreview";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 
+const interviewees = [
+  { initials: "S", name: "Sirine", company: "Choose My Company", color: "bg-teal text-cream" },
+  { initials: "A", name: "Assia", company: "Waat", color: "bg-orange text-midnight" },
+  { initials: "JL", name: "Jean-Louis", company: "Botdesign", color: "bg-midnight text-cream" },
+  { initials: "T", name: "Thibault", company: "ex-Spendesk", color: "bg-teal-soft text-cream" },
+];
+
 const trustItems = [
-  "5 interviews CS, KAM, RevOps menées",
-  "Score hybride machine plus ressenti CSM noté",
+  "Score hybride machine + ressenti CSM",
+  "Intégration native HubSpot et Salesforce",
   "Pilote en 10 jours ouvrés",
 ];
 
@@ -53,6 +60,12 @@ export function HeroSection() {
               </h1>
             </RevealOnScroll>
 
+            <RevealOnScroll delay={0.08}>
+              <p className="display-serif text-xl italic text-teal sm:text-2xl">
+                Pas seulement un score. Un copilote d&apos;action.
+              </p>
+            </RevealOnScroll>
+
             <RevealOnScroll delay={0.1}>
               <p className="max-w-xl text-lg leading-relaxed text-midnight/75">
                 <span className="font-semibold text-teal">Détectez</span> les comptes qui décrochent,{" "}
@@ -89,7 +102,40 @@ export function HeroSection() {
               </div>
             </RevealOnScroll>
 
-            <RevealOnScroll delay={0.2}>
+            <RevealOnScroll delay={0.18}>
+              <Link
+                href="#testimonials"
+                className="group block rounded-2xl border border-cream-deep bg-cream-soft/70 p-4 transition hover:border-orange/40 hover:bg-cream-soft"
+              >
+                <div className="flex flex-wrap items-center gap-4">
+                  <div className="flex -space-x-2">
+                    {interviewees.map((person) => (
+                      <span
+                        key={person.initials}
+                        className={`inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-cream text-[11px] font-semibold ${person.color}`}
+                        title={`${person.name}, ${person.company}`}
+                      >
+                        {person.initials}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex-1 min-w-[180px]">
+                    <p className="text-[11px] font-semibold uppercase tracking-widest text-orange-deep">
+                      Validé terrain
+                    </p>
+                    <p className="text-sm text-midnight/80 leading-snug">
+                      5 interviews CSM senior, Head of CS, RevOps et co-fondateurs · mai 2026
+                    </p>
+                  </div>
+                  <ArrowRight
+                    size={16}
+                    className="text-midnight/40 transition group-hover:translate-x-1 group-hover:text-orange"
+                  />
+                </div>
+              </Link>
+            </RevealOnScroll>
+
+            <RevealOnScroll delay={0.22}>
               <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-midnight/65">
                 {trustItems.map((item) => (
                   <li key={item} className="flex items-center gap-2">
