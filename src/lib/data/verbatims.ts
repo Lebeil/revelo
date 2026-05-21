@@ -8,7 +8,7 @@ export type Verbatim = {
 export const verbatims: Verbatim[] = [
   {
     quote:
-      "C'était vraiment l'argent. Je ne l'avais pas vu venir. C'est un client qui était à fond dans la data, à fond sur la plateforme, mais on n'a pas pu le sauver.",
+      "L'IA qui me donne des propositions, et ensuite moi en tant qu'humain qui connaît la relation, je juge ce qui est mieux. Le health score on ne l'utilise pas trop.",
     author: "Sirine, Senior CSM",
     role: "Choose My Company, 125 clients, 700 k€ ARR",
     source: "Interview Revelo, mai 2026",
@@ -29,13 +29,6 @@ export const verbatims: Verbatim[] = [
   },
   {
     quote:
-      "L'IA qui me donne des propositions, et ensuite moi en tant qu'humain qui connaît la relation, je juge ce qui est mieux. Le health score on ne l'utilise pas trop.",
-    author: "Sirine, Senior CSM",
-    role: "Choose My Company, EdTech SaaS",
-    source: "Interview Revelo, mai 2026",
-  },
-  {
-    quote:
       "Avoir une remontée qui fait usage légal et benchmark tarifaire intégré, ça c'est vrai que ça serait intéressant.",
     author: "Jean-Louis, Co-fondateur",
     role: "Botdesign, HealthTech, contrats 4 ans hôpitaux",
@@ -43,9 +36,9 @@ export const verbatims: Verbatim[] = [
   },
   {
     quote:
-      "Sans rappel, tu n'y penses pas. Le client utilisait bien la plateforme, il était content. C'est juste un problème de coût et de crise financière.",
-    author: "Thibault, CSM Freelance",
-    role: "Ex Spendesk, fintech",
-    source: "Interview Revelo, mai 2026",
+      "Le ressenti humain est un signal que la machine ne pourra pas capter seule, sur le manager de transition ou le désintérêt du nouveau contact. La notation collaborative en équipe est la solution.",
+    author: "Retour coach Lean Startup",
+    role: "Brief J2 Rocket School, validation du pivot évolué",
+    source: "Brief coach, mai 2026",
   },
 ];
