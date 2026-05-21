@@ -15,12 +15,12 @@ export const leadSchema = z.object({
     .max(80),
   role: z
     .string()
-    .max(80)
+    .max(80, { message: "80 caractères maximum." })
     .optional()
     .or(z.literal("")),
   teamSize: z
     .string()
-    .max(60)
+    .max(60, { message: "60 caractères maximum." })
     .optional()
     .or(z.literal("")),
   message: z

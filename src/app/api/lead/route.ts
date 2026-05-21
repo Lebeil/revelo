@@ -48,11 +48,13 @@ export async function POST(request: NextRequest) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(enriched),
-      redirect: "follow",
+      redirect: "manual",
       cache: "no-store",
     });
 
-    if (!upstream.ok) {
+    // Apps Script Web App répond systématiquement en 302 vers script.googleusercontent.com.
+    // doPost() a déjà écrit dans la Sheet avant cette redirection, donc 3xx = succès.
+    if (upstream.status >= 400) {
       const text = await upstream.text().catch(() => "");
       console.error("Apps Script error", upstream.status, text);
       return NextResponse.json(

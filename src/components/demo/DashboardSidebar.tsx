@@ -11,7 +11,6 @@ import {
   Sparkles,
   TrendingUp,
   Users,
-  UsersRound,
 } from "lucide-react";
 import { toast } from "sonner";
 import { Logo } from "@/components/site/Logo";
@@ -45,7 +44,6 @@ export const navGroups: NavGroup[] = [
   {
     label: "Équipe",
     items: [
-      { icon: UsersRound, label: "Notation collaborative", href: "#notation" },
       { icon: Users, label: "Portefeuilles CSM", href: "#", soon: true },
       { icon: LifeBuoy, label: "Support Revelo", href: "mailto:liedel.lam@rocket-school.eu" },
       { icon: Settings, label: "Paramètres", href: "#", soon: true },
