@@ -27,10 +27,10 @@ export function PainPointsSection() {
                 <RevealOnScroll key={pain.id} delay={idx * 0.08}>
                   <article
                     className={cn(
-                      "group relative h-full overflow-hidden rounded-2xl border p-7 transition-all hover:-translate-y-1 hover:shadow-[0_20px_45px_-25px_rgba(10,46,54,0.5)]",
+                      "group relative h-full overflow-hidden rounded-2xl border bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-[0_20px_45px_-25px_rgba(10,46,54,0.5)]",
                       isPrimary
-                        ? "border-orange/40 bg-gradient-to-br from-cream-soft to-orange/5 hover:border-orange/60"
-                        : "border-cream-deep bg-card hover:border-orange/40"
+                        ? "border-orange/40 hover:border-orange/60"
+                        : "border-cream-deep hover:border-orange/40"
                     )}
                   >
                     <span
