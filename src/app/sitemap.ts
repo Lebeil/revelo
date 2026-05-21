@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://revelo-web.vercel.app";
+  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://revelo-alpha.vercel.app";
   const lastModified = new Date();
   return [
     {

@@ -17,7 +17,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://revelo-web.vercel.app"),
+  metadataBase: new URL("https://revelo-alpha.vercel.app"),
   title: {
     default: "Revelo, le copilote de rétention CS, Health Score hybride et actions IA",
     template: "%s · Revelo",
