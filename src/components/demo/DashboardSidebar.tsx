@@ -47,7 +47,7 @@ export const navGroups: NavGroup[] = [
     items: [
       { icon: UsersRound, label: "Notation collaborative", href: "#notation" },
       { icon: Users, label: "Portefeuilles CSM", href: "#", soon: true },
-      { icon: LifeBuoy, label: "Support Revelo", href: "mailto:hello@revelo.io" },
+      { icon: LifeBuoy, label: "Support Revelo", href: "mailto:liedel.lam@rocket-school.eu" },
       { icon: Settings, label: "Paramètres", href: "#", soon: true },
     ],
   },
