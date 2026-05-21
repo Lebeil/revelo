@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "./Logo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { trackCtaClick } from "@/lib/track";
 
 const navLinks = [
   { href: "/#solution", label: "Solution" },
@@ -56,13 +57,23 @@ export function Header() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <Button asChild variant="ghost" className="text-midnight hover:bg-cream-deep">
-              <Link href="/#lead">Parler à l'équipe</Link>
+              <Link
+                href="/#lead"
+                onClick={() => trackCtaClick("header", "parler_equipe")}
+              >
+                Parler à l'équipe
+              </Link>
             </Button>
             <Button
               asChild
               className="bg-teal text-cream hover:bg-teal-deep"
             >
-              <Link href="/#lead">Demander une démo</Link>
+              <Link
+                href="/#lead"
+                onClick={() => trackCtaClick("header", "demander_demo")}
+              >
+                Demander une démo
+              </Link>
             </Button>
           </div>
 
@@ -93,7 +104,13 @@ export function Header() {
                 asChild
                 className="mt-2 bg-teal text-cream hover:bg-teal-deep"
               >
-                <Link href="/#lead" onClick={() => setMobileOpen(false)}>
+                <Link
+                  href="/#lead"
+                  onClick={() => {
+                    trackCtaClick("header-mobile", "demander_demo");
+                    setMobileOpen(false);
+                  }}
+                >
                   Demander une démo
                 </Link>
               </Button>

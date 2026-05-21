@@ -1,9 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, PlayCircle, TrendingUp, Users, Clock, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { HeroDashboardPreview } from "./HeroDashboardPreview";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
+import { trackCtaClick } from "@/lib/track";
 
 const interviewees = [
   { initials: "S", name: "Sirine", company: "Choose My Company", color: "bg-teal text-cream" },
@@ -92,7 +95,10 @@ export function HeroSection() {
                     size="lg"
                     className="bg-teal text-cream hover:bg-teal-deep"
                   >
-                    <Link href="#lead">
+                    <Link
+                      href="#lead"
+                      onClick={() => trackCtaClick("hero", "rejoindre_beta")}
+                    >
                       Rejoindre la beta
                       <ArrowRight className="ml-2" size={16} />
                     </Link>
@@ -103,7 +109,10 @@ export function HeroSection() {
                     variant="outline"
                     className="border-midnight/15 bg-cream-soft text-midnight hover:bg-cream-deep"
                   >
-                    <Link href="/demo">
+                    <Link
+                      href="/demo"
+                      onClick={() => trackCtaClick("hero", "voir_dashboard")}
+                    >
                       <PlayCircle className="mr-2" size={16} />
                       Voir le dashboard live
                     </Link>
@@ -118,6 +127,7 @@ export function HeroSection() {
             <RevealOnScroll delay={0.18}>
               <Link
                 href="#testimonials"
+                onClick={() => trackCtaClick("hero", "valide_terrain")}
                 className="group block rounded-2xl border border-cream-deep bg-cream-soft/70 p-4 transition hover:border-orange/40 hover:bg-cream-soft"
               >
                 <div className="flex flex-wrap items-center gap-4">

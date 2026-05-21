@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Source_Serif_4 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import "./globals.css";
@@ -72,6 +74,8 @@ export default function RootLayout({
       <body className="min-h-screen bg-background text-foreground antialiased">
         <TooltipProvider delayDuration={120}>{children}</TooltipProvider>
         <Toaster position="bottom-right" richColors />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

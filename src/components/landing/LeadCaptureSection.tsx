@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { leadSchema, type LeadInput } from "@/lib/schemas/lead";
 import { RevealOnScroll } from "@/components/site/RevealOnScroll";
 import { cn } from "@/lib/utils";
+import { trackLeadSubmit } from "@/lib/track";
 
 const FIELD_LABEL_STYLE = "text-sm font-medium text-cream/80";
 const FIELD_INPUT_STYLE =
@@ -56,6 +57,7 @@ export function LeadCaptureSection() {
         throw new Error(payload.error ?? "Réponse invalide");
       }
 
+      trackLeadSubmit("landing-lead", values.role, values.teamSize);
       toast.success("Reçu. Un membre de Revelo vous écrit sous 24 h.");
       setSubmitted(true);
       reset();
