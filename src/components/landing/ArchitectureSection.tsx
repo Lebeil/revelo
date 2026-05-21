@@ -3,9 +3,9 @@ import { ArrowRight, Database, MessageSquare, LayoutGrid, ServerCog } from "luci
 
 const sources = [
   { label: "HubSpot, Salesforce", note: "ARR, opportunités, contacts, notes CSM" },
-  { label: "Stripe, Pennylane, Sellsy", note: "Facturation, paliers, retards de paiement" },
-  { label: "Zendesk, Intercom", note: "Tickets SAV, escalades, sentiment client" },
-  { label: "Modjo, Notta + Notation CSM", note: "Sentiment CR réunion + ressenti humain hebdo" },
+  { label: "Mixpanel, Amplitude, Snowflake", note: "Usage produit, logs, licences engagées vs consommées" },
+  { label: "Stripe, Pennylane, Zendesk, Intercom", note: "Facturation, paliers, tickets SAV" },
+  { label: "Notation CSM + Modjo, Notta", note: "Ressenti humain hebdo + sentiment CR réunion" },
 ];
 
 const surfaces = [
@@ -46,9 +46,9 @@ export function ArchitectureSection() {
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
               Revelo s'infiltre dans votre stack existante. Une table compte unique réconcilie
-              HubSpot, Salesforce, Stripe, Zendesk, vos CR de réunion et la notation collaborative
-              CSM. L'agent pousse le plan d'action IA là où vous êtes : Slack, widget HubSpot,
-              e-mail ou webhook MCP.
+              HubSpot, Salesforce, Mixpanel ou Snowflake, Stripe, Zendesk, vos CR de réunion
+              et la notation collaborative CSM. L'agent pousse le plan d'action IA et l'email
+              pré-rédigé là où vous travaillez : widget HubSpot, alertes Slack, webhook MCP.
             </p>
           </RevealOnScroll>
 
@@ -96,32 +96,32 @@ export function ArchitectureSection() {
                     </div>
                     <div className="mt-5 space-y-2.5 font-mono text-[12px] text-cream/85">
                       <p className="flex items-center justify-between">
-                        <span className="text-cream/55">id_sf</span>
+                        <span className="text-cream/55">id_hubspot</span>
                         <span>001ACME</span>
-                      </p>
-                      <p className="flex items-center justify-between">
-                        <span className="text-cream/55">id_product</span>
-                        <span>cust_42811</span>
                       </p>
                       <p className="flex items-center justify-between">
                         <span className="text-cream/55">arr</span>
                         <span className="text-orange">280 000 €</span>
                       </p>
                       <p className="flex items-center justify-between">
+                        <span className="text-cream/55">licenses_engaged</span>
+                        <span>500</span>
+                      </p>
+                      <p className="flex items-center justify-between">
+                        <span className="text-cream/55">licenses_used</span>
+                        <span className="text-destructive">50 (-90 %)</span>
+                      </p>
+                      <p className="flex items-center justify-between">
                         <span className="text-cream/55">renewal</span>
                         <span>2026-09-12</span>
                       </p>
                       <p className="flex items-center justify-between">
-                        <span className="text-cream/55">score_machine</span>
-                        <span>78 / 100</span>
-                      </p>
-                      <p className="flex items-center justify-between">
-                        <span className="text-cream/55">score_human</span>
-                        <span className="text-destructive">96 / 100</span>
+                        <span className="text-cream/55">score_hybrid</span>
+                        <span>42 / 100</span>
                       </p>
                       <p className="flex items-center justify-between">
                         <span className="text-cream/55">flag_csm</span>
-                        <span>manager_transition</span>
+                        <span>sponsor_distant</span>
                       </p>
                     </div>
                   </div>
