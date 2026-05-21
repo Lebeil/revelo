@@ -23,7 +23,7 @@ const steps = [
     bullets: [
       "Score rouge, orange, vert priorisé chaque matin",
       "Détection des écarts machine vs humain",
-      "Signaux humains : manager de transition, désengagement nouveau référent",
+      "Signaux humains : manager de transition, désengagement nouveau référent, baisse d'usage sur un user clé même si global stable",
     ],
   },
   {

@@ -196,7 +196,8 @@ export const accounts: Account[] = [
     signals: [
       { label: "Stakeholder changé", detail: "Nouveau Head of Data depuis avril", kind: "human" },
       { label: "Concurrent évoqué", detail: "Looker mentionné dans 3 tickets", kind: "human" },
-      { label: "Adoption stagnante", detail: "Engagement plat sur 90 jours", delta: "Stagne", kind: "machine" },
+      { label: "User clé décroche", detail: "Power user n°1 -68 % de sessions sur 30 j, global stable", delta: "-68 %", kind: "machine" },
+      { label: "Adoption stagnante", detail: "Engagement global plat sur 90 jours", delta: "Stagne", kind: "machine" },
     ],
     contract: [
       { label: "Renouvellement", value: "04 août 2026" },
