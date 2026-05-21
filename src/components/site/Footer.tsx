@@ -40,7 +40,7 @@ const footerLinks = [
     title: "Ressources",
     links: [
       { href: "https://www.linkedin.com/", label: "LinkedIn équipe" },
-      { href: "mailto:hello@revelo.io", label: "Contact" },
+      { href: "mailto:liedel.lam@rocket-school.eu", label: "Contact" },
     ],
   },
 ];
@@ -65,11 +65,11 @@ export function Footer() {
                   Paris, équipe distribuée FR et EU
                 </span>
                 <Link
-                  href="mailto:hello@revelo.io"
+                  href="mailto:liedel.lam@rocket-school.eu"
                   className="inline-flex items-center gap-2 hover:text-orange"
                 >
                   <Mail size={14} className="text-orange" />
-                  hello@revelo.io
+                  liedel.lam@rocket-school.eu
                 </Link>
                 <Link
                   href="https://www.linkedin.com"

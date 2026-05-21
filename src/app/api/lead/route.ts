@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Lead forward failed", error);
     return NextResponse.json(
-      { error: "Erreur réseau. Réessayez ou écrivez à hello@revelo.io." },
+      { error: "Erreur réseau. Réessayez ou écrivez à liedel.lam@rocket-school.eu." },
       { status: 500 }
     );
   }

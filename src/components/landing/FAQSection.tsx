@@ -19,7 +19,7 @@ export function FAQSection() {
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
               Les questions qui reviennent en démo. Si la vôtre n'est pas listée,
-              écrivez-nous : hello@revelo.io.
+              écrivez-nous : liedel.lam@rocket-school.eu.
             </p>
           </RevealOnScroll>
 

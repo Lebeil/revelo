@@ -61,7 +61,7 @@ export function LeadCaptureSection() {
       reset();
     } catch (error) {
       console.error(error);
-      toast.error("Envoi impossible. Réessayez ou écrivez à hello@revelo.io.");
+      toast.error("Envoi impossible. Réessayez ou écrivez à liedel.lam@rocket-school.eu.");
     }
   };
 

@@ -67,7 +67,7 @@ export function FeedbackForm({
       onSubmitted?.();
     } catch (error) {
       console.error(error);
-      toast.error("Envoi impossible. Réessayez ou écrivez à hello@revelo.io.");
+      toast.error("Envoi impossible. Réessayez ou écrivez à liedel.lam@rocket-school.eu.");
     }
   };
 
@@ -78,7 +78,7 @@ export function FeedbackForm({
         <p className="mt-3 display-serif text-xl text-midnight">Merci, c&apos;est reçu</p>
         <p className="mt-2 text-sm text-midnight/70">
           Votre feedback est en route vers l&apos;équipe Revelo. Si vous souhaitez devenir pilote
-          beta, écrivez-nous à hello@revelo.io.
+          beta, écrivez-nous à liedel.lam@rocket-school.eu.
         </p>
         <Button
           variant="outline"
