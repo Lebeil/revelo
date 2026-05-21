@@ -15,7 +15,7 @@ export const verbatims: Verbatim[] = [
   },
   {
     quote:
-      "Les clients partent principalement pour raisons budgétaires depuis 6 à 12 mois. Le prix est devenu le top 1 vs les fonctionnalités. Votre concurrent fait la même chose moins cher.",
+      "Les clients partent principalement pour raisons budgétaires depuis 6 à 12 mois. Le prix est devenu le top 1 vs les fonctionnalités. On entend de plus en plus : votre concurrent fait la même chose moins cher.",
     author: "Thibault, CSM Freelance",
     role: "Ex Spendesk, 60 comptes 1 M€ ARR",
     source: "Interview Revelo, mai 2026",
