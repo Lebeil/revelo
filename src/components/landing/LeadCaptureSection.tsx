@@ -140,7 +140,7 @@ export function LeadCaptureSection() {
                       className="mt-6 border-cream/30 bg-transparent text-cream hover:bg-cream/10"
                       onClick={() => setSubmitted(false)}
                     >
-                      Renvoyer un autre lead
+                      Inscrire un ou une collègue
                     </Button>
                   </div>
                 </div>
