@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight, PlayCircle, TrendingUp, Users, Clock, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { HeroDashboardPreview } from "./HeroDashboardPreview";
@@ -13,9 +13,9 @@ const interviewees = [
 ];
 
 const trustItems = [
-  "Score hybride machine + ressenti CSM",
-  "Intégration native HubSpot et Salesforce",
-  "Pilote en 10 jours ouvrés",
+  { Icon: Sparkles, label: "Score hybride machine + ressenti CSM noté" },
+  { Icon: TrendingUp, label: "Objectif pilote : +3 pts NRR, 300 k€ d'ARR sauvé sur 10 M€" },
+  { Icon: Clock, label: "Pilote opérationnel en 10 jours ouvrés" },
 ];
 
 export function HeroSection() {
@@ -60,6 +60,13 @@ export function HeroSection() {
               </h1>
             </RevealOnScroll>
 
+            <RevealOnScroll delay={0.07}>
+              <Badge className="inline-flex items-center gap-1.5 border-cream-deep bg-cream-soft text-xs font-medium text-midnight/75 hover:bg-cream-deep">
+                <Users size={12} className="text-teal" />
+                Pour les équipes Customer Success d&apos;éditeurs SaaS B2B mid-market (5 à 50 M€ ARR)
+              </Badge>
+            </RevealOnScroll>
+
             <RevealOnScroll delay={0.08}>
               <p className="display-serif text-xl italic text-teal sm:text-2xl">
                 Pas seulement un score. Un copilote d&apos;action.
@@ -68,37 +75,43 @@ export function HeroSection() {
 
             <RevealOnScroll delay={0.1}>
               <p className="max-w-xl text-lg leading-relaxed text-midnight/75">
-                <span className="font-semibold text-teal">Détectez</span> les comptes qui décrochent,{" "}
-                <span className="font-semibold text-teal">priorisez</span> ceux à risque avec le
-                Health Score hybride, <span className="font-semibold text-teal">déclenchez</span>{" "}
-                les bons plans d'action IA pour sécuriser le renouvellement. Intégré nativement
-                dans HubSpot et Salesforce.
+                Le <span className="font-semibold text-teal">Health Score hybride</span> combine vos
+                données objectives ET la{" "}
+                <span className="font-semibold text-teal">notation collaborative</span> de vos CSM,
+                puis déclenche les <span className="font-semibold text-teal">plans d&apos;action IA</span>{" "}
+                personnalisés selon le profil interlocuteur. Intégré nativement dans HubSpot et
+                Salesforce.
               </p>
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.15}>
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-teal text-cream hover:bg-teal-deep"
-                >
-                  <Link href="#lead">
-                    Rejoindre la beta
-                    <ArrowRight className="ml-2" size={16} />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-midnight/15 bg-cream-soft text-midnight hover:bg-cream-deep"
-                >
-                  <Link href="/demo">
-                    <PlayCircle className="mr-2" size={16} />
-                    Voir le dashboard live
-                  </Link>
-                </Button>
+              <div className="space-y-2">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-teal text-cream hover:bg-teal-deep"
+                  >
+                    <Link href="#lead">
+                      Rejoindre la beta
+                      <ArrowRight className="ml-2" size={16} />
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="outline"
+                    className="border-midnight/15 bg-cream-soft text-midnight hover:bg-cream-deep"
+                  >
+                    <Link href="/demo">
+                      <PlayCircle className="mr-2" size={16} />
+                      Voir le dashboard live
+                    </Link>
+                  </Button>
+                </div>
+                <p className="text-[11px] text-midnight/55">
+                  Aucune carte bancaire requise · 50 premières places pour les pilotes
+                </p>
               </div>
             </RevealOnScroll>
 
@@ -136,11 +149,11 @@ export function HeroSection() {
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.22}>
-              <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-midnight/65">
-                {trustItems.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-orange" aria-hidden />
-                    {item}
+              <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-midnight/70">
+                {trustItems.map(({ Icon, label }) => (
+                  <li key={label} className="inline-flex items-center gap-1.5">
+                    <Icon size={13} className="text-orange" />
+                    <span>{label}</span>
                   </li>
                 ))}
               </ul>

@@ -198,11 +198,11 @@ export function LeadCaptureSection() {
 
                 <div className="space-y-1.5">
                   <Label htmlFor="lead-role" className={FIELD_LABEL_STYLE}>
-                    Rôle
+                    Rôle <span className="font-normal text-cream/50">(optionnel)</span>
                   </Label>
                   <Input
                     id="lead-role"
-                    placeholder="Head of CS, KAM, RevOps, CFO"
+                    placeholder="Head of CS, CSM, RevOps, KAM"
                     className={FIELD_INPUT_STYLE}
                     autoComplete="organization-title"
                     {...register("role")}
@@ -214,7 +214,8 @@ export function LeadCaptureSection() {
 
                 <div className="space-y-1.5 md:col-span-2">
                   <Label htmlFor="lead-team" className={FIELD_LABEL_STYLE}>
-                    Taille équipe Customer Success
+                    Taille équipe Customer Success{" "}
+                    <span className="font-normal text-cream/50">(optionnel)</span>
                   </Label>
                   <Input
                     id="lead-team"
