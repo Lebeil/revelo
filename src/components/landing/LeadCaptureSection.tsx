@@ -57,7 +57,7 @@ export function LeadCaptureSection() {
         throw new Error(payload.error ?? "Réponse invalide");
       }
 
-      trackLeadSubmit("landing-lead", values.role, values.teamSize);
+      trackLeadSubmit("landing-lead", values.role);
       toast.success("Reçu. Un membre de Revelo vous écrit sous 24 h.");
       setSubmitted(true);
       reset();
