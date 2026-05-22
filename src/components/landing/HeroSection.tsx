@@ -47,6 +47,12 @@ export function HeroSection() {
               </Badge>
             </RevealOnScroll>
 
+            <RevealOnScroll delay={0.03}>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-orange-deep">
+                Pour les équipes Customer Success B2B
+              </p>
+            </RevealOnScroll>
+
             <RevealOnScroll delay={0.05}>
               <h1 className="display-serif text-balance text-4xl text-midnight sm:text-5xl lg:text-6xl">
                 Le copilote qui
@@ -64,9 +70,9 @@ export function HeroSection() {
             </RevealOnScroll>
 
             <RevealOnScroll delay={0.07}>
-              <Badge className="inline-flex items-center gap-1.5 border-cream-deep bg-cream-soft text-xs font-medium text-midnight/75 hover:bg-cream-deep">
-                <Users size={12} className="text-teal" />
-                Pour les équipes Customer Success d&apos;éditeurs SaaS B2B mid-market (5 à 50 M€ ARR)
+              <Badge className="inline-flex items-center gap-2 border-orange/25 bg-cream-deep px-3 py-1.5 text-sm font-medium text-midnight hover:bg-orange-soft/30">
+                <Users size={14} className="text-orange" />
+                Éditeurs SaaS B2B mid-market · ARR 5 à 50 M€
               </Badge>
             </RevealOnScroll>
 
