@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRight, Filter, Search } from "lucide-react";
+import { ArrowLeftRight, ChevronRight, Filter, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { accounts, riskRingClass, type Account } from "@/lib/data/mock-accounts";
 import { cn } from "@/lib/utils";
@@ -40,6 +40,11 @@ export function RiskAccountsTable({ selectedId, onSelect }: Readonly<RiskAccount
           </span>
         </div>
       </header>
+
+      <div className="lg:hidden flex items-center gap-1.5 border-b border-cream-deep px-5 py-2 text-[11px] text-midnight/55">
+        <ArrowLeftRight size={12} className="shrink-0 text-orange" />
+        <span>Glissez horizontalement pour voir toutes les colonnes</span>
+      </div>
 
       <div className="overflow-x-auto">
         <table className="w-full min-w-[920px] border-collapse text-sm">

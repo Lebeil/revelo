@@ -12,6 +12,7 @@ import { EmailIntegrationCard } from "@/components/demo/EmailIntegrationCard";
 import { UsageKpiCard } from "@/components/demo/UsageKpiCard";
 import { FeedbackModal } from "@/components/demo/FeedbackModal";
 import { PortfolioActionsSection } from "@/components/demo/PortfolioActionsSection";
+import { NpsQuickSlider } from "@/components/demo/NpsQuickSlider";
 import { accounts, type Account } from "@/lib/data/mock-accounts";
 
 export default function DemoPage() {
@@ -32,7 +33,9 @@ export default function DemoPage() {
 
             <PortfolioActionsSection />
 
-            <div className="grid gap-6 xl:grid-cols-[1.5fr_1.4fr] 2xl:grid-cols-[1.5fr_1.6fr]">
+            <NpsQuickSlider />
+
+            <div className="grid grid-cols-1 gap-5 lg:gap-6 xl:grid-cols-[1.5fr_1.4fr] 2xl:grid-cols-[1.5fr_1.6fr]">
               <RiskAccountsTable
                 selectedId={selected.id}
                 onSelect={(account) => setSelected(account)}

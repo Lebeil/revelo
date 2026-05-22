@@ -245,10 +245,10 @@ export function OnboardingBanner() {
 
   return (
     <section className="overflow-hidden rounded-2xl border border-teal/25 bg-gradient-to-br from-teal/5 via-cream-soft to-orange/5">
-      <div className="flex items-center justify-between gap-3 px-5 py-3">
+      <div className="flex items-center justify-between gap-3 px-4 py-2.5">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-teal text-cream">
-            <Plug size={16} />
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-teal text-cream">
+            <Plug size={14} />
           </span>
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-widest text-orange-deep">
@@ -282,8 +282,8 @@ export function OnboardingBanner() {
       </div>
 
       {!collapsed && (
-        <div className="space-y-5 border-t border-teal/15 px-5 pb-5 pt-4">
-          <p className="max-w-3xl text-sm leading-relaxed text-midnight/75">
+        <div className="space-y-3 border-t border-teal/15 px-4 pb-4 pt-3">
+          <p className="max-w-2xl text-xs leading-relaxed text-midnight/75">
             Cliquez sur chaque outil que vous voulez activer. Seuls les outils validés seront
             branchés à vos comptes. Comptez 1 à 2 minutes par outil (OAuth ou API key) selon la
             stack.
@@ -301,7 +301,7 @@ export function OnboardingBanner() {
                     aria-pressed={isSelected}
                     disabled={validating}
                     className={cn(
-                      "group relative flex h-full w-full flex-col items-start gap-3 rounded-xl border bg-card p-4 text-left transition-all",
+                      "group relative flex h-full w-full flex-col items-start gap-2 rounded-xl border bg-card p-3 text-left transition-all",
                       isSelected
                         ? "shadow-[0_12px_30px_-22px_rgba(15,76,92,0.55)]"
                         : "border-cream-deep hover:bg-cream-soft",
@@ -322,14 +322,14 @@ export function OnboardingBanner() {
                     )}
 
                     <span
-                      className="inline-flex h-11 w-11 items-center justify-center rounded-lg border bg-card transition-colors"
+                      className="inline-flex h-10 w-10 items-center justify-center rounded-lg border bg-card transition-colors"
                       style={{
                         borderColor: isSelected ? color : "var(--cream-deep)",
                         color,
                       }}
                       title={name}
                     >
-                      <Icon className="h-6 w-6" />
+                      <Icon className="h-5 w-5" />
                     </span>
 
                     <div className="min-w-0">

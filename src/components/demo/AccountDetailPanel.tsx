@@ -99,26 +99,26 @@ export function AccountDetailPanel({ account }: Readonly<AccountDetailPanelProps
         </div>
 
         <div className="mt-6 grid gap-3 sm:grid-cols-3">
-          <div className="rounded-xl border border-teal/20 bg-teal/5 px-4 py-3">
+          <div className="rounded-xl border border-teal/20 bg-teal/5 px-4 py-3 min-w-0">
             <p className="text-[11px] font-semibold uppercase tracking-widest text-teal">
               Score machine
             </p>
             <p className="mt-1 display-serif text-2xl text-midnight">{account.machineScore} / 100</p>
-            <p className="text-[11px] text-midnight/60">Usage + contrat + facturation + SAV</p>
+            <p className="text-[11px] text-midnight/60 wrap-break-word">Usage + contrat + facturation + SAV</p>
           </div>
-          <div className="rounded-xl border border-orange/30 bg-orange/10 px-4 py-3">
+          <div className="rounded-xl border border-orange/30 bg-orange/10 px-4 py-3 min-w-0">
             <p className="text-[11px] font-semibold uppercase tracking-widest text-orange-deep">
               Score humain
             </p>
             <p className="mt-1 display-serif text-2xl text-midnight">{account.humanScore} / 100</p>
-            <p className="text-[11px] text-midnight/60">Notation CSM hebdo + sentiment CR</p>
+            <p className="text-[11px] text-midnight/60 wrap-break-word">Notation CSM hebdo + sentiment CR</p>
           </div>
-          <div className="rounded-xl border border-cream-deep bg-cream-soft px-4 py-3">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-midnight/55">
+          <div className="rounded-xl border border-cream-deep bg-cream-soft px-4 py-3 min-w-0">
+            <p className="text-[11px] font-semibold uppercase tracking-widest text-midnight/55 wrap-break-word">
               Note CSM (vendredi dernier)
             </p>
             <p className="mt-1 display-serif text-2xl text-midnight">{account.csmRating} / 10</p>
-            <p className="text-[11px] text-midnight/60">
+            <p className="text-[11px] text-midnight/60 wrap-break-word">
               {account.csmFlag ?? "Aucun drapeau humain"}
             </p>
           </div>
@@ -142,7 +142,7 @@ export function AccountDetailPanel({ account }: Readonly<AccountDetailPanelProps
             />
           </AccordionTrigger>
           <AccordionContent className="pb-5">
-            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
               {account.signals.map((signal) => (
                 <div
                   key={signal.label}

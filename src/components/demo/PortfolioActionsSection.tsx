@@ -130,7 +130,7 @@ export function PortfolioActionsSection() {
                     <PlanIcon size={16} />
                   </span>
                   <div className="min-w-0 flex-1">
-                    <p className="display-serif text-base text-midnight sm:text-lg">
+                    <p className="display-serif text-base text-midnight sm:text-lg wrap-break-word">
                       {plan.title}
                     </p>
                     <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-widest text-orange-deep">
