@@ -39,6 +39,8 @@ const footerLinks = [
   {
     title: "Ressources",
     links: [
+      { href: "#", label: "Blog", soon: true },
+      { href: "#", label: "Newsletter", soon: true },
       { href: "https://www.linkedin.com/", label: "LinkedIn équipe" },
       { href: "mailto:liedel.lam@rocket-school.eu", label: "Contact" },
     ],
@@ -88,13 +90,22 @@ export function Footer() {
                 </p>
                 <ul className="space-y-2">
                   {column.links.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-cream/75 transition-colors hover:text-cream"
-                      >
-                        {link.label}
-                      </Link>
+                    <li key={link.label}>
+                      {link.soon ? (
+                        <span className="inline-flex items-center gap-2 text-sm text-cream/45">
+                          {link.label}
+                          <span className="rounded-full border border-orange/30 bg-orange/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-widest text-orange">
+                            Bientôt
+                          </span>
+                        </span>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-sm text-cream/75 transition-colors hover:text-cream"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
