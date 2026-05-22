@@ -29,7 +29,7 @@ const surfaces = [
     title: "Webhook MCP",
     persona: "Tech leads et RevOps",
     description:
-      "Branchez Revelo dans Slack, Salesforce, Teams ou un agent maison via MCP. Récupérez les plans d'action IA, déclenchez les rituels, orchestrez vos playbooks.",
+      "Branchez Revelo dans Slack, Salesforce, Teams ou un agent maison via MCP. Récupérez les plans d'action, déclenchez vos process de revue, exposez les données dans vos propres outils.",
     icon: ServerCog,
   },
 ];
@@ -42,16 +42,14 @@ export function ArchitectureSection() {
           <RevealOnScroll>
             <p className="eyebrow">Architecture API / MCP first</p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-              Pas un nouvel outil de plus.
+              Revelo se branche sur votre stack.
               <br />
-              Une couche d'intelligence là où vos équipes travaillent déjà.
+              Aucun outil supplémentaire à ouvrir.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-              Revelo s'infiltre dans votre stack existante. Une table compte unique réconcilie
-              HubSpot ou Salesforce, Amplitude ou Mixpanel pour l'usage, Stripe ou Chargebee pour
-              l'ARR, Zendesk pour le support, Gong.io ou Modjo pour le sentiment CR et la notation
-              collaborative CSM. L'agent pousse le plan d'action IA et l'email pré-rédigé là où vous
-              travaillez : widget HubSpot, alertes Slack, webhook MCP.
+              Une table compte unique réconcilie HubSpot (ou Salesforce), Amplitude (ou Mixpanel),
+              Stripe (ou Chargebee), Zendesk et Gong.io. L'agent pousse le plan d'action et le mail
+              pré-rédigé dans le widget HubSpot, dans Slack ou via webhook MCP.
             </p>
           </RevealOnScroll>
 

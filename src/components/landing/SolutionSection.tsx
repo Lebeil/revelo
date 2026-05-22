@@ -7,7 +7,7 @@ const steps = [
     title: "Détecter",
     icon: Radar,
     description:
-      "Revelo regroupe les signaux clés de chaque compte : usage produit, support, historique relationnel, échéances de renouvellement et ressenti du CSM. Aucune saisie manuelle.",
+      "Revelo tire les données d'Amplitude, Zendesk, Stripe et Gong.io, puis ajoute ce que le CSM a noté le vendredi. Aucune saisie manuelle.",
     bullets: [
       "Usage (Amplitude, Mixpanel), CSAT (Zendesk), ARR (Stripe, Chargebee)",
       "Sentiment extrait des CR de réunion (Gong.io, Modjo)",
@@ -31,11 +31,11 @@ const steps = [
     title: "Agir",
     icon: Sparkles,
     description:
-      "Pour chaque compte en zone rouge, Revelo recommande les actions à mener pour réengager le client et sécuriser le renouvellement. Vous lisez, ajustez, déclenchez.",
+      "Pour chaque compte rouge, Revelo génère le mail à envoyer, l'escalade à proposer ou la remise à anticiper. Vous relisez, modifiez si besoin, envoyez.",
     bullets: [
       "Reprise contact préventive scriptée",
       "Remise anticipée avec marge protégée",
-      "Plans d'action IA contextualisés selon le profil interlocuteur",
+      "Escalade KAM ou Direction CS si engagement contractuel",
     ],
   },
 ];
@@ -58,12 +58,12 @@ export function SolutionSection() {
               <span className="bg-orange" />La méthode Revelo
             </p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-cream sm:text-4xl">
-              Détecter, prioriser, agir. Trois étapes, un seul copilote.
+              Trois étapes. Pas six semaines d'onboarding.
             </h2>
             <p className="mt-5 max-w-2xl text-base text-cream/75 leading-relaxed">
-              Revelo n'est pas un dashboard de plus. C'est la couche d'intelligence
-              qui transforme votre donnée éparse et le ressenti de vos CSM en plans
-              d'action IA personnalisés, livrés là où vos équipes travaillent déjà.
+              La donnée Amplitude, le ticket Zendesk ouvert depuis 3 semaines, ce que Marie a noté
+              vendredi : Revelo en fait un score et un plan d'action. Le résultat remonte dans
+              HubSpot ou Slack, là où vous travaillez déjà.
             </p>
           </RevealOnScroll>
 

@@ -94,7 +94,7 @@ export const competitors: Competitor[] = [
   {
     id: "tropic",
     name: "Tropic (côté acheteur)",
-    positioning: "Symétrique acheteur, arme l'acheteur pour négocier la baisse. Prouve que le marché côté fournisseur est libre.",
+    positioning: "Symétrique acheteur, arme l'acheteur pour négocier la baisse. Montre qu'il existe une demande côté fournisseur.",
     hybridScore: 0,
     aiActionPlans: 0,
     contractDepth: 4,

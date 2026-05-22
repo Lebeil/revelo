@@ -120,7 +120,7 @@ export function Footer() {
             <p className="flex items-center gap-3">
               <span>Made in France</span>
               <span aria-hidden>·</span>
-              <span>RGPD natif, hébergement Europe</span>
+              <span>Hébergement Europe · RGPD · données exportables</span>
               <span aria-hidden>·</span>
               <span>© {new Date().getFullYear()} Revelo</span>
             </p>

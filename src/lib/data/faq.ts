@@ -7,7 +7,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Qu'est-ce qu'un Health Score hybride, et pourquoi c'est différent ?",
     answer:
-      "La plupart des outils CS calculent un score 100 % machine basé sur l'usage produit. Le retour terrain de nos 5 interviews dit la même chose : ce score rate les signaux humains (manager de transition côté client, désengagement du nouveau référent, sentiment négatif en QBR). Le Health Score hybride Revelo combine le score machine reproductible (usage, contrat, facturation, tickets, sentiment CR) et une notation collaborative hebdo des CSM, qui capture ce que la donnée ne sait pas dire. Le résultat : un score 0 à 100 par compte, expliqué (par exemple « 45/100, usage -30 % en 60 j et sponsor changé »), et surtout des écarts détectés entre note humaine et score machine, qui sont les vrais signaux à traiter en priorité.",
+      "Gainsight, Vitally, Planhat et Skalin calculent le score sur l'usage produit seul. Le retour terrain de nos 5 interviews dit la même chose : ce score rate les signaux humains (manager de transition côté client, désengagement du nouveau référent, sentiment négatif en QBR). Le Health Score hybride Revelo combine le score machine reproductible (usage, contrat, facturation, tickets, sentiment CR) et une notation collaborative hebdo des CSM, qui capture ce que la donnée ne sait pas dire. Le résultat : un score 0 à 100 par compte, expliqué (par exemple « 45/100, usage -30 % en 60 j et sponsor changé »), et surtout des écarts détectés entre note humaine et score machine, qui sont les vrais signaux à traiter en priorité.",
   },
   {
     question: "Et si mes CSM ne veulent pas noter chaque semaine ?",
@@ -27,7 +27,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Pourquoi Revelo si j'ai déjà Vitally, HubSpot ou Planhat ?",
     answer:
-      "Vitally, HubSpot et Planhat consolident l'usage produit et automatisent le health score machine. C'est un excellent point de départ. Mais aucun ne capture le ressenti humain des CSM en équipe, et aucun ne génère des plans d'action IA personnalisés au profil interlocuteur avec emails pré-rédigés. Revelo s'installe en complément, lit votre stack existant et ajoute les briques manquantes. Pas un nouvel outil de plus : un widget HubSpot ou Salesforce, et des alertes Slack.",
+      "Vitally, HubSpot et Planhat consolident l'usage produit et automatisent le health score machine. Aucun ne capture le ressenti des CSM en équipe, et aucun ne génère le plan d'action concret qui suit le score (mail à envoyer, escalade, remise). Revelo s'installe en complément, lit votre stack existant et ajoute les briques manquantes : un widget HubSpot ou Salesforce, et des alertes Slack.",
   },
   {
     question: "Combien de temps pour démarrer ?",

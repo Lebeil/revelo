@@ -10,12 +10,11 @@ export function PainPointsSection() {
           <RevealOnScroll>
             <p className="eyebrow">Pourquoi maintenant</p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-              Les CSM voient le risque arriver, mais trop tard et sans plan
+              Le compte Acme était vert dans HubSpot. Le sponsor produit était parti depuis deux mois. Personne ne le savait.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-              Signaux humains non captés (manager de transition, désengagement nouveau référent),
-              plans d'action absents quand le compte passe en rouge, saisie manuelle impossible à
-              tenir au-delà de 100 comptes : trois douleurs structurelles qui coûtent la NRR.
+              Changement d'interlocuteur non capté, aucun plan quand le compte vire au rouge, saisie
+              manuelle qui décroche passé 100 clients : voilà ce qui coûte la NRR.
             </p>
           </RevealOnScroll>
 

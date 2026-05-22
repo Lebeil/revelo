@@ -16,12 +16,13 @@ export function PricingSection() {
               <div>
                 <p className="eyebrow">Beta privée gratuite</p>
                 <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-                  Trois paliers, gratuits pendant toute la beta
+                  Trois paliers, tout gratuit pendant la beta
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-                  Démarrez avec la plateforme SaaS, ajoutez l'API quand vous voulez injecter Revelo
-                  dans Slack et Salesforce, et le palier conseil quand vous voulez industrialiser
-                  vos playbooks Customer Success. Aucun engagement, accès complet pendant la beta.
+                  Commencez avec la plateforme. Branchez l'API quand vous voulez faire remonter les
+                  alertes dans Slack ou Salesforce. Appelez-nous si vous voulez qu'on structure la
+                  notation CSM avec votre équipe. Pas d'engagement, exportez vos données quand vous
+                  voulez.
                 </p>
               </div>
               <div className="rounded-2xl border border-orange/40 bg-orange/10 p-4 text-xs text-midnight">

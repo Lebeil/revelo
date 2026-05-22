@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s · Revelo",
   },
   description:
-    "Revelo fusionne le score machine (usage, contrat, facturation, support) et le ressenti CSM noté en équipe, puis propose des plans d'action IA personnalisés selon le profil interlocuteur. Intégré nativement à HubSpot et Salesforce. Conçu pour les éditeurs SaaS B2B mid-market FR et EU.",
+    "Revelo croise le score machine (usage, contrat, facturation, support) et la notation collaborative hebdo des CSM, puis génère le plan d'action et le mail à envoyer. Dans HubSpot et Salesforce, sans outil supplémentaire. Pour les éditeurs SaaS B2B mid-market FR et EU.",
   keywords: [
     "Customer Success",
     "Health Score hybride",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Revelo, le copilote de rétention CS",
     description:
-      "Health Score hybride (score machine + ressenti CSM noté en équipe) et plans d'action IA personnalisés, intégrés dans HubSpot ou Salesforce. Pour les éditeurs SaaS B2B mid-market.",
+      "Health Score hybride (score machine + ressenti CSM noté en équipe) et plans d'action IA, dans HubSpot ou Salesforce. Pour les éditeurs SaaS B2B mid-market.",
     url: "/",
     siteName: "Revelo",
     locale: "fr_FR",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Revelo, le copilote de rétention CS",
     description:
-      "Health Score hybride et plans d'action IA personnalisés, intégrés dans HubSpot et Salesforce.",
+      "Health Score hybride et plans d'action IA, dans HubSpot et Salesforce.",
   },
   robots: { index: true, follow: true },
   category: "technology",

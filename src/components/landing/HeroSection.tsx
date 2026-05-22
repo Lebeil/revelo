@@ -84,12 +84,11 @@ export function HeroSection() {
 
             <RevealOnScroll delay={0.1}>
               <p className="max-w-xl text-lg leading-relaxed text-midnight/75">
-                Le <span className="font-semibold text-teal">Health Score hybride</span> combine vos
-                données objectives ET la{" "}
-                <span className="font-semibold text-teal">notation collaborative</span> de vos CSM,
-                puis déclenche les <span className="font-semibold text-teal">plans d&apos;action IA</span>{" "}
-                personnalisés selon le profil interlocuteur. Intégré nativement dans HubSpot et
-                Salesforce.
+                Le <span className="font-semibold text-teal">Health Score hybride</span> croise vos
+                données d&apos;usage avec ce que vos CSM voient vraiment. Quand un compte passe au
+                rouge, Revelo propose le <span className="font-semibold text-teal">mail à envoyer</span>{" "}
+                et l&apos;action à déclencher, pas juste un chiffre. Dans HubSpot et Salesforce,
+                sans outil supplémentaire.
               </p>
             </RevealOnScroll>
 

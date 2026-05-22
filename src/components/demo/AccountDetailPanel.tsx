@@ -196,7 +196,7 @@ export function AccountDetailPanel({ account }: Readonly<AccountDetailPanelProps
               <PanelHeading
                 Icon={Sparkles}
                 title="Actions proposées par Revelo, à valider"
-                hint={`${account.scenarios.length} plans d'action IA personnalisés`}
+                hint={`${account.scenarios.length} plans d'action IA`}
               />
             </AccordionTrigger>
             <AccordionContent className="pb-5">
@@ -237,7 +237,7 @@ export function AccountDetailPanel({ account }: Readonly<AccountDetailPanelProps
               <UsageChart data={account.usageSeries} delta={account.usageDelta} />
               <p className="text-xs leading-relaxed text-midnight/60">
                 La rupture de tendance, croisée avec le ressenti CSM et les clauses contractuelles,
-                déclenche le plan d&apos;action IA personnalisé selon le profil interlocuteur.
+                déclenche le plan d&apos;action IA adapté au compte.
               </p>
               <div className="mt-1 flex items-start gap-2 rounded-lg border border-cream-deep bg-card p-3">
                 <Activity size={14} className="mt-0.5 shrink-0 text-teal" />

@@ -36,12 +36,11 @@ export function WhoIsItForSection() {
           <RevealOnScroll>
             <p className="eyebrow">Pour qui Revelo est conçu</p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-              Trois rôles qui vivent la rétention contractuelle au quotidien
+              Marie pilote 125 comptes. Sarah ferme le board chaque mois. Thomas découvre le sous-usage à J-30.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-              Revelo embarque chaque persona là où elle travaille déjà.
-              Pas un dashboard générique de plus, une surface produit par profil
-              avec ses propres rituels, alertes et plans d&apos;action.
+              Marie reste dans HubSpot. Sarah garde Salesforce. Thomas reçoit une alerte Slack.
+              Revelo s&apos;adapte à chacun, pas l&apos;inverse.
             </p>
           </RevealOnScroll>
 

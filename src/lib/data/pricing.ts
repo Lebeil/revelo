@@ -22,7 +22,7 @@ export const pricingTiers: PricingTier[] = [
     audience: "Équipes CS de 3 à 12 personnes, portefeuille jusqu'à 200 contrats.",
     highlights: [
       "Health Score hybride : score machine + notation collaborative CSM",
-      "Plans d'action IA personnalisés selon le profil interlocuteur",
+      "Plans d'action IA prêts à envoyer (mail, escalade, remise)",
       "Top 5 priorisé chaque matin, alerte Slack signaux humains",
       "Support français, hébergement Europe, RGPD natif",
     ],
@@ -48,10 +48,10 @@ export const pricingTiers: PricingTier[] = [
   {
     id: "advisory",
     name: "Conseil et accompagnement",
-    tagline: "Playbooks Customer Success structurés, rituels de notation CSM industrialisés.",
+    tagline: "Playbooks Customer Success construits avec vous, notation CSM mise en place et tenue en main.",
     priceFrom: "Sur mesure",
     pricePeriod: "audit gratuit pour les pilotes beta",
-    audience: "Équipes qui veulent industrialiser le rituel de notation et les plans d'action IA.",
+    audience: "Équipes qui veulent structurer la notation CSM hebdo et tirer le maximum des plans d'action.",
     highlights: [
       "Audit de la donnée contrat, usage et CR de réunion (2 semaines)",
       "Mise en place des playbooks save, expansion, renouvellement anticipé",

@@ -125,11 +125,11 @@ export function FeaturesMatrixSection() {
           <RevealOnScroll>
             <p className="eyebrow">Matrice fonctionnelle MVP</p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-              Six fonctionnalités. Trois personas. Une seule donnée.
+              Six modules sur une table de données unique.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-              Revelo embarque six modules taillés pour les rôles qui vivent la rétention contractuelle au quotidien.
-              CSM, RevOps, KAM : chacun reçoit la bonne information au bon endroit, au bon moment.
+              Marie voit le score hybride dans HubSpot. Sarah a le tableau RevOps. Thomas reçoit
+              l'alerte Slack à J-30. Même donnée, trois surfaces différentes.
               Cliquez sur « Voir le détail technique » pour afficher les sources et le moteur de chaque module.
             </p>
           </RevealOnScroll>

@@ -91,9 +91,8 @@ export function LeadCaptureSection() {
                 50 places pour les premiers pilotes
               </h2>
               <p className="max-w-md text-base text-cream/80 leading-relaxed">
-                Décrivez votre stack Revenue, votre douleur principale et le contexte
-                de votre équipe Customer Success. Nous revenons vers vous sous 24 h
-                avec un créneau de 25 minutes.
+                Dites-nous quels outils vous utilisez, combien de comptes votre équipe CS pilote,
+                et ce qui vous a amené ici. On revient sous 24 h avec un créneau de 25 minutes.
               </p>
               <ul className="space-y-3 text-sm text-cream/85">
                 {[

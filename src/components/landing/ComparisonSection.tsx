@@ -27,14 +27,15 @@ export function ComparisonSection() {
           <RevealOnScroll>
             <p className="eyebrow">Positionnement marché</p>
             <h2 className="mt-4 max-w-3xl display-serif text-3xl text-midnight sm:text-4xl">
-              Pas seulement un score. Un copilote d'action.
+              Ce que Gainsight, Vitally et Skalin ne font pas.
             </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-midnight/70">
-              Gainsight et Vitally consolident l'usage. Skalin couvre le SMB. ChurnZero structure
-              les playbooks. Aucun ne combine <span className="font-semibold text-teal">ce que la donnée voit</span>,{" "}
-              <span className="font-semibold text-teal">ce que le CSM ressent</span> et{" "}
-              <span className="font-semibold text-teal">ce que l'équipe doit faire</span>.
-              Comparaison sur 5 critères qui pèsent vraiment dans la décision board.
+              Gainsight et Vitally consolident l'usage. Skalin tient le SMB. ChurnZero structure
+              les playbooks. Aucun ne prend en compte{" "}
+              <span className="font-semibold text-teal">ce que le CSM ressent</span>, et aucun ne
+              propose le{" "}
+              <span className="font-semibold text-teal">plan d'action qui suit le score</span>.
+              Cinq critères, ceux que le board regarde vraiment.
             </p>
           </RevealOnScroll>
 
@@ -129,7 +130,7 @@ export function ComparisonSection() {
               {
                 icon: Check,
                 title: "Ce que personne ne fait",
-                body: "Fusionner score machine, notation collaborative CSM et plans d'action IA personnalisés selon le profil interlocuteur.",
+                body: "Croiser le score machine, la notation hebdo des CSM et un plan d'action concret dans le même outil.",
               },
               {
                 icon: Check,
